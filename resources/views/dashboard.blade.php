@@ -308,19 +308,40 @@ a.article:hover {
                 <li>
                     <a href="#">Acceuil</a>
                 </li>
+                <li>
+                    <a href="#">Liste des CDC</a>
+                </li>
 
                 <li class="">
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">cahier de charges</a>
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Créer un CDC Web</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
                         <li>
-                            <a href="{{route('web')}}">web (CC)</a>
+                            <a href="{{route('web')}}">Site vitrine</a>
                         </li>
                         <li>
-                        <a href="{{route('mobile')}}">mobile (CC)</a>
+                        <a href="{{route('mobile')}}">E-commerce</a>
                         </li>
                         <li>
-                        <a href="{{route('e-commerce')}}">e-commerce (CC)</a>
+                        <a href="{{route('e-commerce')}}">Blog</a>
                         </li>
+                        <li>
+                        <a href="{{route('e-commerce')}}">site d'affiliation</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="#homeSubmen" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Créer un CDC mobile</a>
+                    <ul class="collapse list-unstyled" id="homeSubmen">
+                        <li>
+                            <a href="{{route('web')}}">App E-commerce</a>
+                        </li>
+                        <li>
+                        <a href="{{route('mobile')}}">E-learning</a>
+                        </li>
+                        <li>
+                        <a href="{{route('e-commerce')}}">Service X</a>
+                        </li>
+                    
                     </ul>
                 </li>
               
