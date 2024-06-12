@@ -128,10 +128,16 @@
               for(i=0;i< y.length;i++){
                 if(y[i].value == ""){
                     
-                     $(y[i]).css({    "border-color": "#ff5555"  });
+                     $(y[i]).css({ "border-color": "#ff5555" });
                     return false;
                 }
              }
+            }else {
+                // When clicking "Previous", decrease the opacity of the following steps
+                alert('hhh')
+                for (i = showTab + 1; i <= 4; i++) {
+                $("#step-" + i).css("opacity", "0.25");
+                }
             }
 
             
