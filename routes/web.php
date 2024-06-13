@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Cahier_de_chargeController;
+use App\Http\Controllers\ChatgptController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -30,9 +31,10 @@ Route::middleware('auth')->group(function () {
 });
 Route::middleware('auth')->group(function () {
    
-    Route::get('/web', [Cahier_de_chargeController::class,'web'])->name('web');
+    Route::get('/siteVitrine', [Cahier_de_chargeController::class,'siteVitrine'])->name('siteVitrine');
     Route::get('/mobile', [Cahier_de_chargeController::class,'mobile'])->name('mobile');
     Route::get('/e-commerce', [Cahier_de_chargeController::class,'ecommerce'])->name('e-commerce');
+    Route::post('/create',[ChatgptController::class,'index'])->name('create.chatgpt');
 
 });
 require __DIR__.'/auth.php';

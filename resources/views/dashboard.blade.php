@@ -23,7 +23,7 @@ p {
     font-family: 'Poppins', sans-serif;
     font-size: 1.1em;
     font-weight: 300;
-    line-height: 1.7em;
+    line-height: 21px;
     color: #999;
 }
 
@@ -306,7 +306,7 @@ a.article:hover {
 
             <ul style="margin-left: 18px;" class="list-unstyled  ">
                 <li>
-                    <a href="#">Acceuil</a>
+                   <a href="#">Acceuil</a>
                 </li>
                 <li>
                     <a href="#">Liste des CDC</a>
@@ -316,7 +316,7 @@ a.article:hover {
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Créer un CDC Web</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
                         <li>
-                            <a href="{{route('web')}}">Site vitrine</a>
+                            <a href="{{route('siteVitrine')}}">Site vitrine</a>
                         </li>
                         <li>
                         <a href="{{route('mobile')}}">E-commerce</a>
@@ -333,7 +333,7 @@ a.article:hover {
                     <a href="#homeSubmen" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Créer un CDC mobile</a>
                     <ul class="collapse list-unstyled" id="homeSubmen">
                         <li>
-                            <a href="{{route('web')}}">App E-commerce</a>
+                            <a href="{{route('siteVitrine')}}">App E-commerce</a>
                         </li>
                         <li>
                         <a href="{{route('mobile')}}">E-learning</a>

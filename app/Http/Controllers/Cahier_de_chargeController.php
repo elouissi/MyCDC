@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 
 class Cahier_de_chargeController extends Controller
 {
-    public function web(){
-        return view("cahier_de_charges.web");
+    public function siteVitrine(){
+        return view("cahier_de_charges.siteVitrine");
     }
     public function mobile(){
         return view("cahier_de_charges.mobile");
