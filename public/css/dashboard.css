@@ -1,4 +1,4 @@
-/*
+  /*
     DEMO STYLE
 */
 
@@ -12,7 +12,7 @@ p {
     font-family: 'Poppins', sans-serif;
     font-size: 1.1em;
     font-weight: 300;
-    line-height: 1.7em;
+    line-height: 21px;
     color: #999;
 }
 
@@ -59,8 +59,8 @@ a:focus {
 #sidebar {
     min-width: 250px;
     max-width: 250px;
-    background: #7386D5;
-    color: #fff;
+    background:#fff;
+    color: #6F6B7D;
     transition: all 0.3s;
 }
 
@@ -70,7 +70,7 @@ a:focus {
 
 #sidebar .sidebar-header {
     padding: 20px;
-    background: #6d7fcc;
+    background: #fff;
 }
 
 #sidebar ul.components {
@@ -85,19 +85,20 @@ a:focus {
 
 #sidebar ul li a {
     padding: 10px;
-    font-size: 1.1em;
+    font-size: 16px;
     display: block;
 }
 
 #sidebar ul li a:hover {
-    color: #7386D5;
-    background: #fff;
+    color: #fff;
+    background:#5F58BF ;
+    border-radius: 20px;
 }
 
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
-    color: #fff;
-    background: #6d7fcc;
+    color: #5F58BF;
+    background: #fff;
 }
 
 a[data-toggle="collapse"] {
@@ -115,7 +116,7 @@ a[data-toggle="collapse"] {
 ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
-    background: #6d7fcc;
+    background: #fff;
 }
 
 ul.CTAs {
@@ -150,6 +151,9 @@ a.article:hover {
     padding: 20px;
     min-height: 100vh;
     transition: all 0.3s;
+}
+#sidebarCollapse{
+    
 }
 
 /* ---------------------------------------------------

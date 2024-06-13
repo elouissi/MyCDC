@@ -1,189 +1,21 @@
+ <!DOCTYPE html>
+<html lang="en">
 <head>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.6.0/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <!-- Our Custom CSS -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
-<style>
-    /*
-    DEMO STYLE
-*/
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="{{asset('css/dashboard.css')}}" rel="stylesheet">
+    <link href="{{asset('css/SiteVitrine.css')}}" rel="stylesheet">
 
-@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
-body {
-    font-family: 'Poppins', sans-serif;
-    background: #fafafa;
-}
-
-p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.1em;
-    font-weight: 300;
-    line-height: 21px;
-    color: #999;
-}
-
-a,
-a:hover,
-a:focus {
-    color: inherit;
-    text-decoration: none;
-    transition: all 0.3s;
-}
-
-.navbar {
-    padding: 15px 10px;
-    background: #fff;
-    border: none;
-    border-radius: 0;
-    margin-bottom: 40px;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.navbar-btn {
-    box-shadow: none;
-    outline: none !important;
-    border: none;
-}
-
-.line {
-    width: 100%;
-    height: 1px;
-    border-bottom: 1px dashed #ddd;
-    margin: 40px 0;
-}
-
-/* ---------------------------------------------------
-    SIDEBAR STYLE
------------------------------------------------------ */
-
-.wrapper {
-    display: flex;
-    width: 100%;
-    align-items: stretch;
-}
-
-#sidebar {
-    min-width: 250px;
-    max-width: 250px;
-    background:#fff;
-    color: #5F58BF;
-    transition: all 0.3s;
-}
-
-#sidebar.active {
-    margin-left: -250px;
-}
-
-#sidebar .sidebar-header {
-    padding: 20px;
-    background: #fff;
-}
-
-#sidebar ul.components {
-    padding: 20px 0;
-    border-bottom: 1px solid #47748b;
-}
-
-#sidebar ul p {
-    color: #fff;
-    padding: 10px;
-}
-
-#sidebar ul li a {
-    padding: 10px;
-    font-size: 1.1em;
-    display: block;
-}
-
-#sidebar ul li a:hover {
-    color: #fff;
-    background:#5F58BF ;
-    border-radius: 20px;
-}
-
-#sidebar ul li.active>a,
-a[aria-expanded="true"] {
-    color: #5F58BF;
-    background: #fff;
-}
-
-a[data-toggle="collapse"] {
-    position: relative;
-}
-
-.dropdown-toggle::after {
-    display: block;
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-}
-
-ul ul a {
-    font-size: 0.9em !important;
-    padding-left: 30px !important;
-    background: #fff;
-}
-
-ul.CTAs {
-    padding: 20px;
-}
-
-ul.CTAs a {
-    text-align: center;
-    font-size: 0.9em !important;
-    display: block;
-    border-radius: 5px;
-    margin-bottom: 5px;
-}
-
-a.download {
-    background: #fff;
-    color: #7386D5;
-}
-
-a.article,
-a.article:hover {
-    background: #6d7fcc !important;
-    color: #fff !important;
-}
-
-/* ---------------------------------------------------
-    CONTENT STYLE
------------------------------------------------------ */
-
-#content {
-    width: 100%;
-    padding: 20px;
-    min-height: 100vh;
-    transition: all 0.3s;
-}
-#sidebarCollapse{
-    
-}
-
-/* ---------------------------------------------------
-    MEDIAQUERIES
------------------------------------------------------ */
-
-@media (max-width: 768px) {
-    #sidebar {
-        margin-left: -250px;
-    }
-    #sidebar.active {
-        margin-left: 0;
-    }
-    #sidebarCollapse span {
-        display: none;
-    }
-}
-</style>
+    <title>dashboard</title>
 </head>
+<body>
+
+
+
+
+
 <div class="wrapper">
         <!-- Sidebar  -->
         <nav id="sidebar">
@@ -300,46 +132,47 @@ a.article:hover {
                     </g>
                 </svg>
                 </div>
-                        <h3>MyCDC</h3>
+                        <h3 style="color:#5F58BF" >MyCDC</h3>
                 </div>
             </div>
 
             <ul style="margin-left: 18px;" class="list-unstyled  ">
                 <li>
-                   <a href="#">Acceuil</a>
+                
+                <a href="#"><i style="margin-right: 20px;"class="fa fa-laptop me-2"></i>Acceuil</a>
                 </li>
                 <li>
-                    <a href="#">Liste des CDC</a>
+                    <a href="#"><i style="margin-right: 20px;" class="fa-solid fa-book"></i>Liste des CDC</a>
                 </li>
 
                 <li class="">
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Créer un CDC Web</a>
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i style="margin-right: 10px;"  class="fa-solid fa-pen"></i>Créer un CDC Web</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
                         <li>
-                            <a href="{{route('siteVitrine')}}">Site vitrine</a>
+                            <a href="{{route('siteVitrine')}}"><i class="fa-solid fa-circle"style="margin-right: 10px;" ></i>Site vitrine</a>
                         </li>
                         <li>
-                        <a href="{{route('mobile')}}">E-commerce</a>
+                        <a href="{{route('mobile')}}"><i class="fa-solid fa-circle"style="margin-right: 10px;" ></i>E-commerce</a>
                         </li>
                         <li>
-                        <a href="{{route('e-commerce')}}">Blog</a>
+                        <a href="{{route('e-commerce')}}"><i class="fa-solid fa-circle"style="margin-right: 10px;" ></i>Blog</a>
                         </li>
                         <li>
-                        <a href="{{route('e-commerce')}}">site d'affiliation</a>
+                        <a href="{{route('e-commerce')}}"><i class="fa-solid fa-circle"style="margin-right: 10px;" ></i>site d'affiliation</a>
                         </li>
                     </ul>
                 </li>
                 <li class="">
-                    <a href="#homeSubmen" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Créer un CDC mobile</a>
+                    <a href="#homeSubmen" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i style="margin-right: 10px;" class="fa-solid fa-pen"></i>Créer un CDC mobile</a>
                     <ul class="collapse list-unstyled" id="homeSubmen">
                         <li>
-                            <a href="{{route('siteVitrine')}}">App E-commerce</a>
+                            <a href="{{route('siteVitrine')}}"><i class="fa-solid fa-circle"style="margin-right: 10px;" ></i>App E-commerce</a>
                         </li>
                         <li>
-                        <a href="{{route('mobile')}}">E-learning</a>
+                        <a href="{{route('mobile')}}"><i class="fa-solid fa-circle"style="margin-right: 10px;" ></i>E-learning</a>
                         </li>
                         <li>
-                        <a href="{{route('e-commerce')}}">Service X</a>
+                        <a href="{{route('e-commerce')}}"><i class="fa-solid fa-circle"style="margin-right: 10px;" ></i>Service X</a>
                         </li>
                     
                     </ul>
@@ -347,10 +180,10 @@ a.article:hover {
               
                  
                 <li>
-                    <a href="#">Utilisateurs</a>
+                    <a href="#"><i style="margin-right: 20px;" class="fa-solid fa-users"></i>Utilisateurs</a>
                 </li>
                 <li>
-                    <a href="#">Configuration</a>
+                    <a href="#"><i  style="margin-right: 20px;" class="fa-solid fa-sliders"></i>Configuration</a>
                 </li>
             </ul>
 
@@ -374,27 +207,28 @@ a.article:hover {
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav ml-auto">
+                            
                             <li class="nav-item active">
                                 <a class="nav-link" href="#">Page</a>
                             </li>
                            
                             <li class="nav-item">
-                            <div class="btn-group">
-                                    <button style="background-color: #5F58BF; color:#fff" type="button" class="btn   dropdown-toggle" data-toggle="dropdown">
-                                  {{auth()->user()->name}}
-                                    </button>
-                                    <div class="dropdown-menu dropdown-menu-right">
-                                        <button class="dropdown-item" type="button"><a href="{{route('profile.edit')}}">Profile</a></button>
-                                        <form method="POST" action="{{ route('logout') }}">
-                                        @csrf
-                                        <button class="dropdown-item" type="submit"> Log out </button>
-                                        </form>
-                                  
-                            
-                                    </div>
-                                    </div>
-
+                                <div class="btn-group">
+                                        <button style="background-color: #5F58BF; color:#fff" type="button" class="btn   dropdown-toggle" data-toggle="dropdown">
+                                    {{auth()->user()->name}}
+                                        </button>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <button class="dropdown-item" type="button"><a href="{{route('profile.edit')}}">Profile</a></button>
+                                            <form method="POST" action="{{ route('logout') }}">
+                                            @csrf
+                                            <button class="dropdown-item" type="submit"> Log out </button>
+                                            </form>
+                                    
+                                
+                                        </div>
+                                </div>
                             </li>
+
                         </ul>
                     </div>
                 </div>
@@ -404,19 +238,19 @@ a.article:hover {
         </div>
         
     </div>
-
     
 
 
 
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <!-- Popper.JS -->
-     <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-<script>
+    <script>
          $(document).ready(function() {
             $('#sidebarCollapse').on('click', function () {
                 $('#sidebar').toggleClass('active');
             });
         });
     </script>
+</body>
+</html>
