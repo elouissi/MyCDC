@@ -4,7 +4,7 @@
 
             <h1 style="margin-bottom: -42px;" align = center > Créer un cahier des charges </h1>
 
-            
+
         <form  action="{{route('create.chatgpt')}}" method="POST" autocomplete="off" id="form" >
             @csrf
             @method('POST')
@@ -86,8 +86,8 @@
                     <textarea   placeholder="c'est que vous voulez" name="texte"></textarea>
                     <input type="text" placeholder="Personne à contacter" name="email">
                     <div class="index-btn-wrapper">
-                        <div class="index-btn"onclick="run(3,2)">Previous</div>
-                        <div class="index-btn"onclick="run(3,4)">Next</div>
+                        <div class="index-btn"onclick="run(4,3)">Previous</div>
+                        <div class="index-btn"onclick="run(4,5)">Next</div>
                     </div>
                 </div>
                 <div class="tab" id="tab-5">
@@ -95,15 +95,15 @@
                     <textarea   placeholder="c'est que vous voulez" name="texte"></textarea>
                     <input type="text" placeholder="Personne à contacter" name="email">
                     <div class="index-btn-wrapper">
-                        <div class="index-btn"onclick="run(3,2)">Previous</div>
-                        <div class="index-btn"onclick="run(3,4)">Next</div>
+                        <div class="index-btn"onclick="run(5,4)">Previous</div>
+                        <div class="index-btn"onclick="run(5,6)">Next</div>
                     </div>
                 </div>
                 <div class="tab" id="tab-6">
                     <p>confirmation:</p>
     
                     <div class="index-btn-wrapper">
-                        <div class="index-btn" onclick="run(4,3)">Previous</div>
+                        <div class="index-btn" onclick="run(6,7)">Previous</div>
                         <button class="index-btn" type="submit" style="background-color: green;" >Submit</button>
                     </div>
                 </div>
@@ -148,7 +148,7 @@
                 }
              }
             }else {  
-                for (i = showTab + 1; i <= 4; i++) {
+                for (i = showTab + 1; i <= 6; i++) {
                 $("#step-" + i).css("opacity", "0.25");
                 }
             }

@@ -34,6 +34,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/siteVitrine', [Cahier_de_chargeController::class,'siteVitrine'])->name('siteVitrine');
     Route::get('/mobile', [Cahier_de_chargeController::class,'mobile'])->name('mobile');
     Route::get('/e-commerce', [Cahier_de_chargeController::class,'ecommerce'])->name('e-commerce');
+    Route::get('/Liste des cahier des charges', [Cahier_de_chargeController::class,'List'])->name('List');
     Route::post('/create',[ChatgptController::class,'index'])->name('create.chatgpt');
 
 });

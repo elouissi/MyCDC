@@ -142,7 +142,7 @@
                 <a href="#"><i style="margin-right: 20px;"class="fa fa-laptop me-2"></i>Acceuil</a>
                 </li>
                 <li>
-                    <a href="#"><i style="margin-right: 20px;" class="fa-solid fa-book"></i>Liste des CDC</a>
+                    <a href="{{route('List')}}"><i style="margin-right: 20px;" class="fa-solid fa-book"></i>Liste des CDC</a>
                 </li>
 
                 <li class="">
@@ -207,7 +207,7 @@
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav ml-auto">
-                            
+
                             <li class="nav-item active">
                                 <a class="nav-link" href="#">Page</a>
                             </li>

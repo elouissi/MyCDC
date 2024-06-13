@@ -182,6 +182,7 @@ return [
     */
 
     'aliases' => Facade::defaultAliases()->merge([
+        'Gemini' => Gemini\Laravel\Facades\Gemini::class,
         // 'Example' => App\Facades\Example::class,
     ])->toArray(),
 

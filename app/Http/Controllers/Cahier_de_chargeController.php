@@ -15,4 +15,7 @@ class Cahier_de_chargeController extends Controller
     public function ecommerce(){
         return view("cahier_de_charges.e-commerce");
     }
+    public function List(){
+        return view("cahier_de_charges.List");
+    }
 }
