@@ -103,7 +103,7 @@
                     <p>confirmation:</p>
     
                     <div class="index-btn-wrapper">
-                        <div class="index-btn" onclick="run(6,7)">Previous</div>
+                        <div class="index-btn" onclick="run(6,5)">Previous</div>
                         <button class="index-btn" type="submit" style="background-color: green;" >Submit</button>
                     </div>
                 </div>

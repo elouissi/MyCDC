@@ -4,6 +4,8 @@ use App\Http\Controllers\Cahier_de_chargeController;
 use App\Http\Controllers\ChatgptController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use OpenAI\Laravel\Facades\OpenAI;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -36,6 +38,19 @@ Route::middleware('auth')->group(function () {
     Route::get('/e-commerce', [Cahier_de_chargeController::class,'ecommerce'])->name('e-commerce');
     Route::get('/Liste des cahier des charges', [Cahier_de_chargeController::class,'List'])->name('List');
     Route::post('/create',[ChatgptController::class,'index'])->name('create.chatgpt');
+
+});
+
+Route::get('/chat',function(){
+    $chat = OpenAI::chat()->create([
+        'model'=> 'text-davinci-003',
+        'messages'=> [
+            'role'=> 'user',
+            'content'=> 'hello'
+
+        ]
+    ]);
+    return $chat->choices[0]->message->content;
 
 });
 require __DIR__.'/auth.php';
