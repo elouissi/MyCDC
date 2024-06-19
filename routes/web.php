@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Cahier_de_chargeController;
 use App\Http\Controllers\ChatgptController;
+use App\Http\Controllers\PDFController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use OpenAI\Laravel\Facades\OpenAI;
@@ -38,6 +39,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/e-commerce', [Cahier_de_chargeController::class,'ecommerce'])->name('e-commerce');
     Route::get('/Liste des cahier des charges', [Cahier_de_chargeController::class,'List'])->name('List');
     Route::post('/create',[ChatgptController::class,'index'])->name('create.chatgpt');
+    Route::get('/generate-pdf', [PDFController::class, 'generatePDF'])->name('generate.pdf');
 
 });
 

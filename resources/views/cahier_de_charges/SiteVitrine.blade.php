@@ -2,10 +2,12 @@
 @section('content')
 
 
-            <h1 style="margin-bottom: -42px;" align = center > Créer un cahier des charges </h1>
+ 
+            <h4 style="    margin-bottom: -45px;" align = center  >
+        <span  class="text-muted fw-light" >Créer un CDC Web/</span>Site Vitrine
+    </h4>
 
-
-        <form  action="{{route('create.chatgpt')}}" method="POST" autocomplete="off" id="form" >
+        <form  action="{{route('create.chatgpt')}}" method="POST"  target="_blank" autocomplete="off" id="form" >
             @csrf
             @method('POST')
          
@@ -28,27 +30,43 @@
                         <input type="text" placeholder="Havet digitale" name="Nom_de_l'entreprise">
                         </div>
                         <div class="input-wrapper">
-                        <label for="email">Email<span style="color: red;" >*</span> </label>
-                        <input type="email" placeholder="XXXX@XX.XX" name="email">
+                        <label for="phone">phone<span style="color: red;" >*</span> </label>
+                        <input type="phone" placeholder="+1 (207) 604-443" name="phone">
                         </div>
                     </div>
                     <div class="input-group">
                
                         <div class="input-wrapper" style=" margin-top:30px;   display: flex; gap: 20px;" >
-
-                         <label for=" ">avez-vous un site web?<span style="color: red;" >*</span> </label> 
+                            <label for=" ">Avez-vous un site web?<span style="color: red;">*</span></label>
                             <input type="radio" name="demo2" class="demo2 demoyes" id="demo2-a" checked>
                             <label for="demo2-a">Oui</label>
 
-                            <input type="radio" name="demo2" class="demo2 demono" id="demo2-b" >
+                            <input type="radio" name="demo2" class="demo2 demono" id="demo2-b">
                             <label for="demo2-b">Non</label>
                         </div>
+              
 
                         <div class="input-wrapper">
                         <label for="email">Email<span style="color: red;" >*</span> </label>
                         <input type="email" placeholder="XXXX@XX.XX" name="email">
                         </div>
+
                     </div>
+                    <div id="website-link-container" style="display: none;">
+                        <label for="website-link">Lien du site web <span style="color: red;" >*</span> </label>
+                        <input type="text" placeholder="URL du site web" id="website-link" name="website-link">
+                    </div>
+                    <div class="input-group" style="margin-top:20px">
+                        <div class="input-wrapper">
+                        <label for="Cible">Cible  </label>
+                        <input type="text" placeholder="Cible" name="Cible">
+                        </div>
+                        <div class="input-wrapper">
+                        <label for="Personne à contacter">Personne à contacter<span style="color: red;" >*</span> </label>
+                        <input type="Personne à contacter"  placeholder="Personne à contacter (nom et prénom)"  name="Personne_contacter">
+                        </div>
+                    </div>
+                    
                     <div class="index-btn-wrapper">
                         <div class="index-btn" onclick="run(1,2)">Next</div>
                     </div>
@@ -115,6 +133,21 @@
            $(".tab").css("display","none") 
            $("#tab-1").css("display","block")
 
+
+           function toggleWebsiteLinkInput() {
+                if ($('#demo2-a').is(':checked')) {
+                    $('#website-link-container').show();
+                } else {
+                    $('#website-link-container').hide();
+                }
+            }
+
+            // Add event listeners to the radio buttons
+            $('input[name="demo2"]').on('change', toggleWebsiteLinkInput);
+
+            // Initial check to set the correct state on page load
+            toggleWebsiteLinkInput();
+
            function run(hideTab, showTab){ 
                 
                 if(hideTab < showTab){
@@ -129,7 +162,7 @@
                     $(y[i]).css({ "border-color": "#ff5555" });
                     return false;
                 }else if (y[i].name == "Nom_de_l'entreprise") {
-                    var regex = /^[a-zA-Z\s]+$/;
+                    var regex = /^[a-zA-ZÀ-ÿ\s,':-]+$/;
                     if (!regex.test(y[i].value)) {
                     $(y[i]).css({ "border-color": "#ff5555" });
                     return false;
@@ -142,6 +175,11 @@
                     }
                 } else if (y[i].name == "phone") {
                     var regex = /^\+\d{1,3} \(\d{3}\) \d{3}-\d{4}$/;
+                    if (!regex.test(y[i].value)) {
+                    $(y[i]).css({ "border-color": "#ff5555" });
+                    return false;}
+                }else if (y[i].name == "website-link") {
+                    var regex = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/;
                     if (!regex.test(y[i].value)) {
                     $(y[i]).css({ "border-color": "#ff5555" });
                     return false;}
