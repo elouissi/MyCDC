@@ -16,7 +16,7 @@ class PDFController extends Controller
     
         // Add the first page
         $pdf->AddPage();
-    
+ 
         // Set font
         $pdf->SetFont('Arial', 'B', 16);
     
