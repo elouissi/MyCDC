@@ -3,7 +3,7 @@
 
 
  
-            <h4 style="    margin-bottom: -45px;" align = center  >
+            <h4 style="    margin-bottom: -70px;" align = center  >
         <span  class="text-muted fw-light" >Créer un CDC Web/</span>Site Vitrine
     </h4>
 
@@ -16,7 +16,7 @@
                 <span class="step" id="step-1">1</span><p>Présentation <br> de l'entreprise</p> >
                 <span class="step" id="step-2" >2</span><p>objectif  du<br> site</p> >
                 <span class="step" id="step-3" >3</span><p>analyse de <br>l'existant</p> >
-                <span class="step" id="step-4" >4</span><p>analyse de <br>l'existant</p> >
+                <span class="step" id="step-4" >4</span><p>Design et <br>Contenu</p> >
                 <span class="step" id="step-5" >5</span><p>analyse de <br>l'existant</p> >
                 <span class="step" id="step-6" >6</span><p>confirmation</p>
                 
@@ -88,13 +88,36 @@
                     </select>
                     </div>
                     <div class="input-wrapper">
-                        <label for="Menu">Menu (Avez vous une préférence à ajouter sur le site):<span style="color: red;" >*</span> </label>
-                        <textarea style="border-radius:20px" type="text" name="Menu" placeholder="Indiquez votre préférence des menus à ajouter sur le site"  ></textarea>
+                    <legend>Your favorite technologies    <span style="color: red;" >*</span>     </legend>        
+                    <fieldset style="     width: 750px;   display: flex; flex-wrap: wrap; " >
+                                <div style="width:33%;display:block;line-height:1px">
+                                    <label style="    margin-right: -208px;" ><input type="checkbox" name="Formulaire de contact" value="Formulaire de contact" checked> Formulaire de contact</label><br />
+                                    <label style="    margin-right: -208px;" ><input type="checkbox" name="Géolocalisation" value="Géolocalisation"> Géolocalisation</label><br />
+                                    <label style="    margin-right: -208px;" ><input type="checkbox" name="Besoin des APIs" value="Besoin des APIs"> Besoin des APIs</label><br />
+                                    <label style="    margin-right: -208px;" ><input type="checkbox" name="Google Analytics" value="Google Analytics">Google Analytics</label><br />
+                                </div>
+                                <div style="width:33%;display:block;line-height:1px">
+                                    <label style="    margin-right: -208px;" ><input type="checkbox" name="Blog" value="Blog"> Blog</label><br />
+                                    <label style="    margin-right: -208px;" ><input type="checkbox" name="Capture des leads" value="Capture des leads"> Capture des leads</label><br />
+                                    <label style="    margin-right: -208px;" ><input type="checkbox" name="Calendly" value="Calendly">Calendly</label><br />
+                                    <label style="    margin-right: -208px;" ><input type="checkbox" name="Réseaux sociaux" value="Réseaux sociaux" checked> Réseaux sociaux</label><br />
+                                </div>
+                                <div style="width:33%;display:block;line-height:1px">
+                                    <label style="    margin-right: -208px;" ><input type="checkbox" name="Backoffice" value="Backoffice"> Backoffice</label><br />
+                                    <label style="    margin-right: -208px;" ><input type="checkbox" name="Plugins sur mesure" value="Plugins sur mesure"> Plugins sur mesure</label><br /> 
+                                    <label style="    margin-right: -208px;" ><input type="checkbox" name="Chatbotai" value="Chatbotai" checked> Chatbotai</label><br />
+                                </div> 
+                    </fieldset>
                     </div>
+                 
                     </div>
 
                     
-                    <div class="input-group">
+                    <div class="input-group">  
+                         <div class="input-wrapper">
+                        <label for="Menu">Menu (Avez vous une préférence à ajouter sur le site):<span style="color: red;" >*</span> </label>
+                        <textarea style="border-radius:20px" type="text" name="Menu" placeholder="Indiquez votre préférence des menus à ajouter sur le site"  ></textarea>
+                    </div>
                         <div class="input-wrapper">
                         <label for="Mots-cles_cibles">Mots-clés cibles (Avez-vous des mots-clés à cibler sur le site):<span style="color: red;" >*</span> </label>
                         <textarea style="border-radius:20px" type="text" name="Mots-cles_cibles" placeholder="Saisissez vos mots-clés cibles pour le site"  ></textarea>
@@ -140,12 +163,12 @@
                         </div>
                         <div class="input-wrapper">
                         <label for="Specifications_techniques">Exemples de sites avec commentaire :<span style="color: red;" >*</span> </label>
-                        <textarea style="border-radius:20px" type="text" name="Specifications_techniques" placeholder="Ajoutez des exemples de sites que vous aimez avec des commentaires sur ce que vous aimez bien sur ces sites (éléments, animation, couleurs, architecture d’informations, fonctionnalités, etc.)."   ></textarea>
+                        <textarea style="border-radius:20px;    height: 126px;" type="text" name="Specifications_techniques" placeholder="Ajoutez des exemples de sites que vous aimez avec des commentaires sur ce que vous aimez bien sur ces sites (éléments, animation, couleurs, architecture d’informations, fonctionnalités, etc.)."   ></textarea>
                         </div>
                     </div>
                     <div class="input-group">
                     <div class="input-wrapper" style=" margin-top:30px;   display: flex; gap: 20px;" >
-                            <label for=" ">Avez-vous un site web?<span style="color: red;">*</span></label>
+                            <label for=" ">Avez-vous un hébergement ?<span style="color: red;">*</span></label>
                             <input type="radio" name="demo2-2" class="demo2 demoyes" id="demo2-2-a" checked>
                             <label for="demo2-2-a">Oui</label>
 
@@ -153,14 +176,14 @@
                             <label for="demo2-2-b">Non</label>
                         </div>
                         <div id="website-link-container-2" style="display: none;">
-                        <label for="website-link">Lien du site web <span style="color: red;" >*</span> </label>
-                        <input type="text" placeholder="URL du site web" id="website-link" name="Site_web_de_l'entreprise">
+                        <label for="website-link">Hébergement <span style="color: red;" >*</span> </label>
+                        <input type="text" placeholder="Hébergement (si disponible)" id="website-link" name="Site_web_de_l'entreprise">
                     </div>
               
                     </div>
                     <div class="input-group">
                     <div class="input-wrapper" style=" margin-top:30px;   display: flex; gap: 20px;" >
-                            <label for=" ">Avez-vous un site web?<span style="color: red;">*</span></label>
+                            <label for=" ">Avez-vous un nom de domaine ? <span style="color: red;">*</span></label>
                             <input type="radio" name="demo2-3" class="demo2 demoyes" id="demo2-3-a" checked>
                             <label for="demo2-3-a">Oui</label>
 
@@ -168,8 +191,8 @@
                             <label for="demo2-3-b">Non</label>
                         </div>
                         <div id="website-link-container-3" style="display: none;">
-                        <label for="website-link">Lien du site web <span style="color: red;" >*</span> </label>
-                        <input type="text" placeholder="URL du site web" id="website-link" name="Site_web_de_l'entreprise">
+                        <label for="website-link">Domain <span style="color: red;" >*</span> </label>
+                        <input type="text" placeholder="Nom de domaine (si disponible)" id="website-link" name="Site_web_de_l'entreprise">
                     </div>
               
                     </div>
@@ -179,9 +202,120 @@
                     </div>
                 </div>
                 <div class="tab" id="tab-4">
-                    <p>analyse de l'existant:</p>
-                    <textarea   placeholder="c'est que vous voulez" name="texte"></textarea>
-                    <input type="text" placeholder="Personne à contacter" name="email">
+                    <p>Design et Contenu:</p>
+                    <div class="input-group">
+                        <div class="input-wrapper">
+                        <table style="width: 500px; border: 1px solid #ddd;" class="table  mb-0 bg-white">
+                        <thead class="bg-light">
+                                <tr>
+                                <th>Elément</th>
+                                <th>Fournis</th>
+                                <th>A créer</th>
+                             
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <td>
+                                   Logo
+                                </td>
+                                <td>
+                                <div style="display:flex;">
+                                        <input style="    width:14px;" type="radio" id="logo" name="logo" value="logo"   />
+                                        <label for="uploadInput" style="cursor: pointer; margin-left: 10px;">
+                                        <i class="fas fa-upload" style="display: none;" id="uploadIcon-logo"></i>
+                                        </label>
+                                        <input type="file" id="uploadInput" style="display: none;">
+                                    </div>    
+                                   </td>
+                                <td>
+                                <input style="    margin-left: -37px;" type="radio" id="logo-hide" name="logo" value="logo" checked />
+                                </td>
+                                
+                                </tr>
+                                <tr>
+                                <td>
+                                charte graphique
+
+                                </td>
+                                <td>
+                                <div style="display:flex;">
+                                        <input style="    width:14px;" type="radio" id="charte_graphique" name="charte_graphique" value="charte_graphique"   />
+                                        <label for="uploadInput" style="cursor: pointer; margin-left: 10px;">
+                                        <i class="fas fa-upload" style="display: none;" id="uploadIcon-charte"></i>
+                                        </label>
+                                        <input type="file" id="uploadInput" style="display: none;">
+                                    </div>    
+                                   </td>
+                                <td>
+                                <input style="  margin-left: -37px;" type="radio" id="charte_graphique-hide" name="charte_graphique" value="charte_graphique" checked />
+                                </td> 
+                                </tr>
+                                <tr>
+                                <td>
+                                Maquette / Wireframe
+
+                                </td>
+                                <td>
+                         
+                                <div style="display:flex;">
+                                        <input style="    width:14px;" type="radio" id="Maquette" name="Maquette" value="Maquette"   />
+                                        <label for="uploadInput" style="cursor: pointer; margin-left: 10px;">
+                                        <i class="fas fa-upload" style="display: none;" id="uploadIcon-Maquette"></i>
+                                        </label>
+                                        <input type="file" id="uploadInput" style="display: none;">
+                                    </div>    
+                                   </td>
+                                <td>
+                                <input style="margin-left: -37px;" type="radio" id="Maquette-hide" name="Maquette" value="Maquette" checked />
+                                </td>
+                                
+                                </tr>
+                                <tr>
+                                <td>
+                                Desc services/ produits 
+
+
+                                </td>
+                                <td>
+                                    <div style="display:flex;">
+                                        <input style="  width:14px " type="radio" id="Typographies" name="Typographies" value="Typographies"   />
+                                        <label for="uploadInput" style="cursor: pointer; margin-left: 10px;">
+                                        <i class="fas fa-upload" style="display: none;" id="uploadIcon-Typographies"></i>
+                                        </label>
+                                        <input type="file" id="uploadInput" style="display: none;">
+                                    </div>    
+                                </td>
+                                <td>
+                                <input style="margin-left: -37px;" type="radio" id="Typographies-hide" name="Typographies" value="Typographies" checked />
+                                </td>
+                                
+                                </tr>
+                                <tr>
+                                <td>
+                                Typographies (police d'ecriture)
+                                </td>
+                                <td>
+                                <div style="display:flex;">
+                                        <input style="  width:14px " type="radio" id="produits" name="produits" value="produits"   />
+                                        <label for="uploadInput" style="cursor: pointer; margin-left: 10px;">
+                                        <i class="fas fa-upload" style="display: none;" id="uploadIcon-produits"></i>
+                                        </label>
+                                        <input type="file" id="uploadInput" style="display: none;">
+                                    </div>  
+                            
+                                   </td>
+                                <td>
+                                <input style="margin-left: -37px;" type="radio" id="produits-hide" name="produits" value="produits" checked />
+                                </td>
+                                
+                                </tr>
+                          
+                            </tbody>
+                        </table>
+                        </div>
+                        
+                    </div>
                     <div class="index-btn-wrapper">
                         <div class="index-btn"onclick="run(4,3)">Previous</div>
                         <div class="index-btn"onclick="run(4,5)">Next</div>
@@ -213,11 +347,54 @@
             new MultiSelectTag('languages')  // id
         </script>
         <script>
+        $('#logo').change(function() {
+          
+        $('#uploadIcon-logo').show();
+      });
+        $('#logo-hide').change(function() {
+    
+        $('#uploadIcon-logo').hide();
+      });
+        $('#charte_graphique').change(function() {
+          
+        $('#uploadIcon-charte').show();
+      });
+        $('#charte_graphique-hide').change(function() {
+    
+        $('#uploadIcon-charte').hide();
+      });
+        $('#Maquette').change(function() {
+          
+        $('#uploadIcon-Maquette').show();
+      });
+        $('#Maquette-hide').change(function() {
+    
+        $('#uploadIcon-Maquette').hide();
+      });
+        $('#Typographies').change(function() {
+          
+        $('#uploadIcon-Typographies').show();
+      });
+        $('#Typographies-hide').change(function() {
+    
+          $('#uploadIcon-Typographies').hide();
+      });
+        $('#produits').change(function() {
+          
+        $('#uploadIcon-produits').show();
+      });
+        $('#produits-hide').change(function() {
+    
+          $('#uploadIcon-produits').hide();
+      });
+        </script>
+        <script>
 
             
            $(".tab").css("display","none") 
            $("#tab-1").css("display","block")
 
+         
 
            function toggleWebsiteLinkInput() {
                 if ($('#demo2-a').is(':checked')) {
@@ -281,7 +458,7 @@
                 }
             } else if (y[i].name == "Site_web_de_l'entreprise") {
                 var regex = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/;
-                if (!regex.test(y[i].value)) {
+                if (!regex.test(y[i].value || y[i].value !== "" )) {
                     $(y[i]).css({ "border-color": "#ff5555" });
                     return false;
                 }

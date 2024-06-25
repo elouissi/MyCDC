@@ -1,10 +1,11 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag@3.0.1/dist/css/multi-select-tag.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="{{asset('css/dashboard.css')}}" rel="stylesheet">
     <link href="{{asset('css/SiteVitrine.css')}}" rel="stylesheet">
@@ -153,13 +154,13 @@
                             <a href="{{route('siteVitrine')}}"><i class="fa-solid fa-circle"style="margin-right: 10px;" ></i>Site vitrine</a>
                         </li>
                         <li>
-                        <a href="{{route('mobile')}}"><i class="fa-solid fa-circle"style="margin-right: 10px;" ></i>E-commerce</a>
+                            <a href="{{route('mobile')}}"><i class="fa-solid fa-circle"style="margin-right: 10px;" ></i>E-commerce</a>
                         </li>
                         <li>
-                        <a href="{{route('e-commerce')}}"><i class="fa-solid fa-circle"style="margin-right: 10px;" ></i>Blog</a>
+                            <a href="{{route('e-commerce')}}"><i class="fa-solid fa-circle"style="margin-right: 10px;" ></i>Blog</a>
                         </li>
                         <li>
-                        <a href="{{route('e-commerce')}}"><i class="fa-solid fa-circle"style="margin-right: 10px;" ></i>site d'affiliation</a>
+                            <a href="{{route('e-commerce')}}"><i class="fa-solid fa-circle"style="margin-right: 10px;" ></i>site d'affiliation</a>
                         </li>
                     </ul>
                 </li>
