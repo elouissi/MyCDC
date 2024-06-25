@@ -42,6 +42,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/generate-pdf', [PDFController::class, 'generatePDF'])->name('generate.pdf');
 
 });
+ 
 
 Route::get('/chat',function(){
     $chat = OpenAI::chat()->create([

@@ -90,7 +90,7 @@
                     <div class="input-wrapper">
                     <legend>Your favorite technologies    <span style="color: red;" >*</span>     </legend>        
                     <fieldset style="     width: 750px;   display: flex; flex-wrap: wrap; " >
-                                <div style="width:33%;display:block;line-height:1px">
+                    <div style="width:33%;display:block;line-height:5px">
                                     <label style="    margin-right: -208px;" ><input type="checkbox" name="Formulaire de contact" value="Formulaire de contact" checked> Formulaire de contact</label><br />
                                     <label style="    margin-right: -208px;" ><input type="checkbox" name="Géolocalisation" value="Géolocalisation"> Géolocalisation</label><br />
                                     <label style="    margin-right: -208px;" ><input type="checkbox" name="Besoin des APIs" value="Besoin des APIs"> Besoin des APIs</label><br />
@@ -314,7 +314,45 @@
                             </tbody>
                         </table>
                         </div>
-                        
+                        <div class="input-wrapper">
+                        <label for="Palette de couleurs">Palette de couleurs :<span style="color: red;" >*</span> </label>
+                        <textarea style="border-radius:20px;     " type="text" name="Palette de couleurs" placeholder="Indiquez les couleurs souhaitées pour votre site."   ></textarea>
+                     
+                        <label for="Exemples de sites avec commentaire">Exemples de sites avec commentaire :<span style="color: red;" >*</span> </label>
+                        <textarea style="border-radius:20px;    height: 126px;" type="text" name="Exemples de sites avec commentaire" placeholder="Ajoutez des exemples de sites que vous aimez avec des commentaires sur ce que vous aimez bien sur ces sites (éléments, animation, couleurs, architecture d’informations, fonctionnalités, etc.)."   ></textarea>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-wrapper">
+                        <legend>Your favorite technologies    <span style="color: red;" >*</span>     </legend>        
+                        <fieldset style="     width: 750px;   display: flex; flex-wrap: wrap; " >
+                                    <div style="width:33%;display:block;line-height:1px">
+                                        <label style="    margin-right: -208px;" ><input type="checkbox" name="Formulaire de contact" value="Formulaire de contact" checked> Formulaire de contact</label><br />
+                                        <label style="    margin-right: -208px;" ><input type="checkbox" name="Géolocalisation" value="Géolocalisation"> Géolocalisation</label><br />
+                                        <label style="    margin-right: -208px;" ><input type="checkbox" name="Besoin des APIs" value="Besoin des APIs"> Besoin des APIs</label><br />
+                                        <label style="    margin-right: -208px;" ><input type="checkbox" name="Google Analytics" value="Google Analytics">Google Analytics</label><br />
+                                
+                                        <label style="    margin-right: -208px;" ><input type="checkbox" name="Blog" value="Blog"> Blog</label><br />
+                                        <label style="    margin-right: -208px;" ><input type="checkbox" name="Capture des leads" value="Capture des leads"> Capture des leads</label><br />
+                                    </div> 
+                        </fieldset>
+                        </div>
+                        <div class="input-wrapper" >
+                        <div class="aegov-form-control control-sm">
+                            <label for="fileInput-sm">Télécharger des images </label>
+                            <div class="form-control-input">
+                                <input id="fileInput-sm" type="file" name="fileInput-sm">
+                            </div>
+                        </div>
+                        <label for="fileInput-sm">Nombre de propositions attendues : <span style="color: red;" >*</span>   </label>
+                        <select style="    height: 43px; border-radius: 11px;width: 265px;" name="propositions" id="propositions">
+                            <option value="" selected  ></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                        </div>
+                 
                     </div>
                     <div class="index-btn-wrapper">
                         <div class="index-btn"onclick="run(4,3)">Previous</div>
@@ -323,8 +361,403 @@
                 </div>
                 <div class="tab" id="tab-5">
                     <p>analyse de l'existant:</p>
-                    <textarea   placeholder="c'est que vous voulez" name="texte"></textarea>
-                    <input type="text" placeholder="Personne à contacter" name="email">
+                    <div class="input-group" >
+                            <input type="number" name="deadline_id" id="deadline_id" readonly class="d-none">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="row">
+                                                <div class="col-10 mb-3">
+                                                    <label class="form-label">Gestion de projet : <span
+                                                            class="text-danger">*</span></label>
+                                                    <div class="row">
+                                                        <div class="col-auto">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="radio"
+                                                                    id="gestionProjetBoutEnBout" name="gestion_projet"
+                                                                    value="Bout en bout">
+                                                                <label class="form-check-label"
+                                                                    for="gestionProjetBoutEnBout">
+                                                                    Bout en bout
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="radio"
+                                                                    id="gestionProjetAgile" name="gestion_projet"
+                                                                    value="Agile">
+                                                                <label class="form-check-label" for="gestionProjetAgile">
+                                                                    Agile - être informé régulièrement de l’avancement du
+                                                                    projet
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-10 mb-3">
+                                                    <label>Communication : <span class="text-danger">*</span></label>
+                                                    <br>
+                                                    @php
+                                                        $communications = [
+                                                            ['name' => 'Téléphone', 'alias' => 'telephone'],
+                                                            ['name' => 'E-mail', 'alias' => 'email'],
+                                                            [
+                                                                'name' => 'Visio-conférences',
+                                                                'alias' => 'visio_conference',
+                                                            ],
+                                                        ];
+                                                    @endphp
+                                                    <div class="row">
+                                                        @foreach ($communications as $item)
+                                                            <div class="col-auto">
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox"
+                                                                        id="communication_{{ $item['alias'] }}"
+                                                                        name="communication[]"
+                                                                        value="{{ $item['name'] }}">
+                                                                    <label class="form-check-label"
+                                                                        for="communication_{{ $item['alias'] }}"">
+                                                                        {{ $item['name'] }}
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        @endforeach
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="row">
+
+                                                <div class="col-md-12 mb-3">
+                                                    <div class="form-group">
+                                                        <label class="form-label">Délais : <span
+                                                                class="text-danger">*</span></label>
+                                                        <input type="text" class="form-control" id="delais"
+                                                            name="deadline" placeholder="Délais">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 mb-3">
+                                                    <label class="form-label">Plage budgétaire :</label>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="form-group">
+                                                                <label class="form-label">Budget minimum :</label>
+                                                                <div class="input-group input-group-merge">
+                                                                    <span class="input-group-text">€</span>
+                                                                    <input type="number" class="form-control"
+                                                                        placeholder="00" id="budget_from"
+                                                                        name="budget_from" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="col-1 d-flex align-items-center justify-content-center">
+                                                            <i class="m-auto mb-2 ti ti-arrow-big-right-filled"></i>
+                                                        </div>
+                                                        <div class="col">
+                                                            <div class="form-group">
+                                                                <label class="form-label">Budget maximum :</label>
+                                                                <div class="input-group input-group-merge">
+                                                                    <span class="input-group-text">€</span>
+                                                                    <input type="number" class="form-control"
+                                                                        placeholder="00" id="budget_to"
+                                                                        name="budget_to" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr class="mb-3">
+                                    <div class="col-12">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="table-responsive text-nowrap">
+                                                    <table class="table table table-bordered">
+                                                        <thead>
+                                                            <tr>
+                                                                <td rowspan="15"
+                                                                    style="text-align: center; vertical-align: middle;">
+                                                                    Délais
+                                                                    &
+                                                                    Budgétisation</td>
+                                                                <td>Désignation</td>
+                                                                <td>Nombre de jours</td>
+                                                                <td>Montant unitaire</td>
+                                                                <td>Total HT</td>
+                                                            </tr>
+                                                            @php
+                                                                $budgetisation = [
+                                                                    [
+                                                                        'title' => "Installation de l'environnement",
+                                                                        'alias' => 'installation-environnement',
+                                                                        'name' => 'installation_environment',
+                                                                    ],
+                                                                    [
+                                                                        'title' => 'Intégration de la structure',
+                                                                        'alias' => 'integration-structure',
+                                                                        'name' => 'integration_structure',
+                                                                    ],
+                                                                    [
+                                                                        'title' => 'Ebauche Des Textes et traductions',
+                                                                        'alias' => 'ebauche-textes-traductions',
+                                                                        'name' => 'draft_texts_translations',
+                                                                    ],
+                                                                    [
+                                                                        'title' => 'Maquettage graphique',
+                                                                        'alias' => 'maquettage-graphique',
+                                                                        'name' => 'graphic_modeling',
+                                                                    ],
+                                                                    [
+                                                                        'title' => 'Développement & intégrations web',
+                                                                        'alias' => 'developpement-integrations-web',
+                                                                        'name' => 'web_development_integrations',
+                                                                    ],
+                                                                    [
+                                                                        'title' => 'Intégration des textes et images',
+                                                                        'alias' => 'integration-textes-images',
+                                                                        'name' => 'text_image_integration',
+                                                                    ],
+                                                                    [
+                                                                        'title' =>
+                                                                            "Intégration d'autres pages (contact, catégories ...etc.)",
+                                                                        'alias' => 'integration-autres-pages',
+                                                                        'name' => 'other_pages_integration',
+                                                                    ],
+                                                                    [
+                                                                        'title' => 'Optimisation de la version Mobile',
+                                                                        'alias' => 'optimisation-version-mobile',
+                                                                        'name' => 'mobile_version_optimization',
+                                                                    ],
+                                                                    [
+                                                                        'title' => 'Intégration du multilingue',
+                                                                        'alias' => 'integration-multilingue',
+                                                                        'name' => 'multilingual_integration',
+                                                                    ],
+                                                                    [
+                                                                        'title' => 'Optimisation Pour SEO',
+                                                                        'alias' => 'optimisation-seo',
+                                                                        'name' => 'seo_optimisation',
+                                                                    ],
+                                                                    [
+                                                                        'title' => 'Suivi et tests',
+                                                                        'alias' => 'suivi-tests',
+                                                                        'name' => 'testing_tracking',
+                                                                    ],
+                                                                    [
+                                                                        'title' => 'Gestion de projets',
+                                                                        'alias' => 'gestion-projet',
+                                                                        'name' => 'project_management',
+                                                                    ],
+                                                                ];
+                                                            @endphp
+                                                            @foreach ($budgetisation as $item)
+                                                                <tr>
+                                                                    <td class="p-0 px-3 py-1">{{ $item['title'] }}</td>
+                                                                    <td class="p-0 px-3 py-1">
+                                                                        <input type="number"
+                                                                            class="form-control form-control h-100"
+                                                                            placeholder="00" id="nj-{{ $item['alias'] }}"
+                                                                            name="number_of_days_{{ $item['name'] }}">
+                                                                    </td>
+                                                                    <td class="p-0 px-3 py-1">
+                                                                        <div
+                                                                            class="input-group input-group input-group-merge">
+                                                                            <span class="input-group-text py-0">€</span>
+                                                                            <input type="number"
+                                                                                class="form-control py-1" placeholder="00"
+                                                                                id="mu-{{ $item['alias'] }}"
+                                                                                name="unit_amount_{{ $item['name'] }}" />
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="p-0 px-3 py-1">
+                                                                        <div
+                                                                            class="input-group input-group input-group-merge">
+                                                                            <span class="input-group-text py-0">€</span>
+                                                                            <input type="number"
+                                                                                class="form-control py-1" placeholder="00"
+                                                                                readonly id="total-{{ $item['alias'] }}"
+                                                                                name="total_{{ $item['name'] }}" />
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            @endforeach
+                                                            <tr>
+                                                                <td class="p-0 px-3 py-1">Remise exceptionnelle </td>
+                                                                <td class="p-0 px-3 py-1" colspan="3">
+                                                                    <div class="input-group input-group-merge">
+                                                                        <span class="input-group-text">€</span>
+                                                                        <input type="number" class="form-control"
+                                                                            placeholder="00" id="remise-exceptionnelle"
+                                                                            name="exceptional_discount" />
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="p-0 px-3 py-1">Total (HT) </td>
+                                                                <td class="p-0 px-3 py-1" colspan="3">
+                                                                    <div class="input-group input-group-merge">
+                                                                        <span class="input-group-text">€</span>
+                                                                        <input type="number" class="form-control"
+                                                                            placeholder="00" readonly id="total-total"
+                                                                            name="total" />
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </thead>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <hr class="my-5">
+                                            <div id="pourcentages">
+                                                @php
+                                                    $index = 1;
+                                                @endphp
+
+                                                @for ($i = 1; $i <= 10; $i++)
+                                                    <div class="row  @if ($index > 1) d-none @endif"
+                                                        id="pourcentage-{{ $index }}">
+                                                        <div
+                                                            class="border border-bottom-0 border-dark border-start-0 border-top-0 col-7 pb-4">
+                                                            <div class="row">
+                                                                <div class="col-2 mt-auto">
+                                                                    <div class="form-group">
+                                                                        <label class="form-label"
+                                                                            id="label-pourcentage-operation-{{ $index }}"
+                                                                            for="pourcentage-operation-{{ $index }}">
+                                                                            @if ($index == 1)
+                                                                                Pourcentage à payer après la signature:
+                                                                            @endif
+                                                                        </label>
+                                                                        <div class="input-group input-group-merge">
+                                                                            <span class="input-group-text">%</span>
+                                                                            <input type="number" class="form-control"
+                                                                                name="installment_{{ $index }}_percentage"
+                                                                                id="pourcentage-operation-{{ $index }}"
+                                                                                @if ($index == 1) value="20" @endif
+                                                                                placeholder="00" />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-3 mt-auto">
+                                                                    <div class="form-group">
+                                                                        <label class="form-label"
+                                                                            id="label-pourcentage-value-{{ $index }}"
+                                                                            for="pourcentage-value-{{ $index }}">
+                                                                            Montant
+                                                                        </label>
+                                                                        <div class="input-group input-group-merge">
+                                                                            <span class="input-group-text">€</span>
+                                                                            <input type="number" class="form-control"
+                                                                                name="installment_{{ $index }}_amount"
+                                                                                id="pourcentage-value-{{ $index }}"
+                                                                                placeholder="00" readonly />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-5 mt-auto">
+                                                                    <label class="form-label"
+                                                                        for="titre-operation-{{ $index }}">
+                                                                        Titre de l'operation:
+                                                                    </label>
+                                                                    <input type="text" class="form-control"
+                                                                        placeholder="Titre de l'operation"
+                                                                        name="installment_{{ $index }}_title"
+                                                                        id="titre-operation-{{ $index }}"
+                                                                        @if ($index == 1) readonly
+                                                                        title="Pourcentage à payer après la signature"
+                                                                        value="Pourcentage à payer après la signature" @endif>
+                                                                </div>
+                                                                {{-- <div class="col-1 mt-auto">
+                                                                    <button type="button" data-bs-toggle="tooltip"
+                                                                        data-bs-placement="top" title="Confirmer"
+                                                                        class="btn btn-icon btn-label-success waves-effect waves-light"
+                                                                        id="confirm-btn-{{ $index }}">
+                                                                        <i class="ti ti-check"></i>
+                                                                    </button>
+                                                                </div> --}}
+                                                                <div class="col-1 mt-auto">
+                                                                    @if ($index < 10)
+                                                                        <button type="button" data-bs-toggle="tooltip"
+                                                                            data-bs-placement="top" title="Ajouter"
+                                                                            class="btn btn-icon btn-label-primary waves-effect waves-light"
+                                                                            id="plus-btn-{{ $index }}">
+                                                                            <i class="ti ti-plus"></i>
+                                                                        </button>
+                                                                    @endif
+                                                                </div>
+                                                                <div class="col-1 mt-auto">
+                                                                    @if ($index > 1)
+                                                                        <button type="button" data-bs-toggle="tooltip"
+                                                                            data-bs-placement="top" title="Supprimer"
+                                                                            class="btn btn-icon  btn-label-danger waves-effect waves-light"
+                                                                            id="delete-btn-{{ $index }}">
+                                                                            <i class="ti ti-trash"></i>
+                                                                        </button>
+                                                                    @endif
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        @if ($index == 1)
+                                                            <div class="col-5">
+                                                                <div class="form-group">
+                                                                    <label class="form-label fs-4"> <b> Le reste :</b>
+                                                                    </label>
+                                                                    <div class="input-group input-group-merge">
+                                                                        <span class="input-group-text">€</span>
+                                                                        <input type="number" class="form-control"
+                                                                            placeholder="00" id="reste"
+                                                                            name="rest" />
+                                                                    </div>
+                                                                </div>
+                                                                <hr class="my-3">
+                                                                <div class="row">
+                                                                    <div class="col-6 mb-3 mt-auto">
+                                                                        <div class="form-group">
+                                                                            <label class="form-label fs-4"
+                                                                                id="label-pourcentage-operation-maintenance"
+                                                                                for="pourcentage-operation-maintenance">
+                                                                                <b> Maintenance :</b>
+                                                                            </label>
+                                                                            <div class="input-group input-group-merge">
+                                                                                <span class="input-group-text">%</span>
+                                                                                <input type="number" class="form-control"
+                                                                                    id="pourcentage-operation-maintenance"
+                                                                                    name="maintenance_percentage"
+                                                                                    placeholder="00" value="20" />
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-6 mb-3 mt-auto">
+                                                                        <div class="form-group">
+
+                                                                            <div class="input-group input-group-merge">
+                                                                                <span class="input-group-text">€</span>
+                                                                                <input type="number"
+                                                                                    class="form-control"
+                                                                                    id="pourcentage-value-maintenance"
+                                                                                    name="maintenance_amount"
+                                                                                    placeholder="00" value="20"
+                                                                                    readonly />
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        @endif
+                                                    </div>
+                                                    @php
+                                                        $index++;
+                                                    @endphp
+                                                @endfor
+                                            </div>
+
+                                        </div>
+                                    </div>
+                    </div>                
                     <div class="index-btn-wrapper">
                         <div class="index-btn"onclick="run(5,4)">Previous</div>
                         <div class="index-btn"onclick="run(5,6)">Next</div>
