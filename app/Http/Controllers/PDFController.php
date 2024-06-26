@@ -11,12 +11,14 @@ class PDFController extends Controller
     {
         $message = $request->query('message');
         $response = $request->query('response');
+        $infos =  $request->query('infos') ;
 
-        
+    
         $data =[
             'message' => $message,
-            'response' => $response
-        ];
+            'response' => $response,
+            'infos' => $infos
+               ];
 
         $pdf = Pdf::loadView('PDF.file-pdf', $data);
         return $pdf->stream('cahier_de_charge.pdf');

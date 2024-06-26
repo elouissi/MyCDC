@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag@3.0.1/dist/css/multi-select-tag.css">
+    <link rel="stylesheet" href="{{asset('css/multiselect.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="{{asset('css/dashboard.css')}}" rel="stylesheet">
@@ -195,7 +195,7 @@
         <!-- Page Content  -->
         <div id="content">
 
-            <nav class="navbar navbar-expand-lg navbar-light bg-light mx-6" style="    border-radius: 22px;">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light mx-6">
                 <div class="container-fluid">
 
                     <button type="button" id="sidebarCollapse" style="background-color: #5F58BF; color:#fff" class="btn  ">
@@ -210,14 +210,13 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav ml-auto">
 
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#">Page</a>
-                            </li>
+                          
                            
                             <li class="nav-item">
                                 <div class="btn-group">
-                                        <button style="background-color: #5F58BF; color:#fff" type="button" class="btn   dropdown-toggle" data-toggle="dropdown">
-                                    {{auth()->user()->name}}
+                                        <button style="background-color: #5F58BF; color:#fff;    border-radius: 30px;" type="button" class="btn    " data-toggle="dropdown">
+                                    {{auth()->user()->name}} <i class="fa fa-chevron-down me-2"></i>
+
                                         </button>
                                         <div class="dropdown-menu dropdown-menu-right">
                                             <button class="dropdown-item" type="button"><a href="{{route('profile.edit')}}">Profile</a></button>

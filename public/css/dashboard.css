@@ -27,8 +27,8 @@ a:focus {
 .navbar {
     padding: 15px 10px;
     background: #fff;
-    border: none;
-    border-radius: 0;
+    height: 52px;
+    border-radius: 22px;
     margin-bottom: 40px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
@@ -37,6 +37,7 @@ a:focus {
     box-shadow: none;
     outline: none !important;
     border: none;
+    
 }
 
 .line {
@@ -155,6 +156,45 @@ a.article:hover {
 #sidebarCollapse{
     
 }
+/* Style pour le tableau */
+.table-bordered {
+    border: 1px solid #ddd;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.table-bordered th,
+.table-bordered td {
+    padding: 8px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.input-group-sm .form-control {
+    height: 28px;
+    font-size: 12px;
+}
+
+.input-group-sm .input-group-text {
+    padding: 3px 5px;
+    font-size: 12px;
+}
+
+/* Style pour les cellules du tableau */
+.table-responsive {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.table th {
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+}
+
+.table td {
+    border-top: 1px solid #ddd;
+}
+
 
 /* ---------------------------------------------------
     MEDIAQUERIES

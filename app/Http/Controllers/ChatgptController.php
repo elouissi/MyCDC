@@ -62,7 +62,7 @@ class ChatgptController extends Controller
             $chatResponse = $result['choices'][0]['message']['content'];
 
             // Pass the response to the generatePDF method
-            return redirect()->route('generate.pdf', ['message' => $message, 'response' => $chatResponse]);
+            return redirect()->route('generate.pdf', ['message' => $message, 'response' => $chatResponse,'infos' => $request->all()]);
 
         } catch (ClientException $e) {
             return response()->json(['error' => $e->getMessage()], $e->getCode());

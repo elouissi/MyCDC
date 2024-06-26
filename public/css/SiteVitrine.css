@@ -1,8 +1,8 @@
 #form{
     background: #fff;
     margin: 100px auto;
-    width: 70%;
-    padding: 15px 40px 40px 40px;
+    width: 80%;
+    padding: 15px 30px 30px 30px;
 }
 .tab p{
     font-size: 20px;
@@ -19,7 +19,7 @@ input   {
     border-radius: 20px;
 }
   textarea{
-    margin: 10px 0;
+    margin: 5px 0;
     padding: 10px;
     width: 100%;
     font-size: 17px;
@@ -62,7 +62,7 @@ opacity: 0.25;
 .input-group {
 display: flex;
 justify-content: space-between;
-margin-bottom: 30px;
+margin-bottom: 20px;
 gap: 20px;
 }
 
@@ -79,9 +79,25 @@ margin-right: 0;
 display: block;
 margin-bottom: 5px;
 }
+.input-wrapper-2 {
+flex: 1;
+margin-right: 10px;
+}
+
+.input-wrapper-2:last-child {
+margin-right: 0;
+}
+
+.input-wrapper-2 label {
+display: block;
+margin-bottom: 5px;
+}
 
 .input-wrapper input {
 width: 100%;
+}
+.input-wrapper-2 input {
+width: 15%;
 }
 input[type="radio"].demo2 {
 display: none;
@@ -115,4 +131,8 @@ border-color: #5F58BF;
 input[type="radio"].demo2.demono:checked + label {
 background-color: #5F58BF;
 border-color: #5F58BF;
+}
+#pourcentages{
+    padding: 0 31px;
+    margin-top: -138px;
 }

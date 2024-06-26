@@ -12,7 +12,7 @@
             @method('POST')
          
 
-            <div align = center style="margin-top:20px;display: flex; gap:20px;">
+            <div align = center style="margin-top:20px;display: flex; gap:20px;  ">
                 <span class="step" id="step-1">1</span><p>Présentation <br> de l'entreprise</p> >
                 <span class="step" id="step-2" >2</span><p>objectif  du<br> site</p> >
                 <span class="step" id="step-3" >3</span><p>analyse de <br>l'existant</p> >
@@ -75,11 +75,10 @@
                 </div>
                 <div class="tab" id="tab-2">
                     <p>objectif du site:</p>
-                    <div class="input-group">
-                    <div class="input-wrapper">
+                    <div class="input-group"  > 
+                    <div class="input-wrapper-2">
                     <label for="langue">Language<span style="color: red;" >*</span> </label>                    
                     <select name="languages[]" id="languages"  multiple>
-                         
                         <option value="francais">francais</option>
                         <option value="Anglais">Anglais</option>
                         <option value="Allemand">Allemand</option>
@@ -162,8 +161,8 @@
                         </div>	
                         </div>
                         <div class="input-wrapper">
-                        <label for="Specifications_techniques">Exemples de sites avec commentaire :<span style="color: red;" >*</span> </label>
-                        <textarea style="border-radius:20px;    height: 126px;" type="text" name="Specifications_techniques" placeholder="Ajoutez des exemples de sites que vous aimez avec des commentaires sur ce que vous aimez bien sur ces sites (éléments, animation, couleurs, architecture d’informations, fonctionnalités, etc.)."   ></textarea>
+                        <label for="Exemples_de_sites_avec_commentaires">Exemples de sites avec commentaire :<span style="color: red;" >*</span> </label>
+                        <textarea style="border-radius:20px;    height: 126px;" type="text" name="Exemples_de_sites_avec_commentaires" placeholder="Ajoutez des exemples de sites que vous aimez avec des commentaires sur ce que vous aimez bien sur ces sites (éléments, animation, couleurs, architecture d’informations, fonctionnalités, etc.)."   ></textarea>
                         </div>
                     </div>
                     <div class="input-group">
@@ -192,7 +191,7 @@
                         </div>
                         <div id="website-link-container-3" style="display: none;">
                         <label for="website-link">Domain <span style="color: red;" >*</span> </label>
-                        <input type="text" placeholder="Nom de domaine (si disponible)" id="website-link" name="Site_web_de_l'entreprise">
+                        <input type="text" placeholder="Nom de domaine (si disponible)" id="website-link" name="Nom_de_domaine">
                     </div>
               
                     </div>
@@ -316,7 +315,7 @@
                         </div>
                         <div class="input-wrapper">
                         <label for="Palette de couleurs">Palette de couleurs :<span style="color: red;" >*</span> </label>
-                        <textarea style="border-radius:20px;     " type="text" name="Palette de couleurs" placeholder="Indiquez les couleurs souhaitées pour votre site."   ></textarea>
+                        <textarea style="border-radius:20px;     " type="text" name="Palette_de_couleurs" placeholder="Indiquez les couleurs souhaitées pour votre site."   ></textarea>
                      
                         <label for="Exemples de sites avec commentaire">Exemples de sites avec commentaire :<span style="color: red;" >*</span> </label>
                         <textarea style="border-radius:20px;    height: 126px;" type="text" name="Exemples de sites avec commentaire" placeholder="Ajoutez des exemples de sites que vous aimez avec des commentaires sur ce que vous aimez bien sur ces sites (éléments, animation, couleurs, architecture d’informations, fonctionnalités, etc.)."   ></textarea>
@@ -369,10 +368,10 @@
                                                 <div class="col-10 mb-3">
                                                     <label class="form-label">Gestion de projet : <span
                                                             class="text-danger">*</span></label>
-                                                    <div class="row">
+                                                    <div class="block">
                                                         <div class="col-auto">
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="radio"
+                                                                <input class="form-check-input" type="radio" style="margin-right:-10px"
                                                                     id="gestionProjetBoutEnBout" name="gestion_projet"
                                                                     value="Bout en bout">
                                                                 <label class="form-check-label"
@@ -383,11 +382,11 @@
                                                         </div>
                                                         <div class="col-auto">
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="radio"
+                                                                <input class="form-check-input" type="radio" style="margin-right:-10px"
                                                                     id="gestionProjetAgile" name="gestion_projet"
                                                                     value="Agile">
                                                                 <label class="form-check-label" for="gestionProjetAgile">
-                                                                    Agile - être informé régulièrement de l’avancement du
+                                                                    Agile - être informé <br>régulièrement de l’avancement du
                                                                     projet
                                                                 </label>
                                                             </div>
@@ -402,19 +401,21 @@
                                                             ['name' => 'Téléphone', 'alias' => 'telephone'],
                                                             ['name' => 'E-mail', 'alias' => 'email'],
                                                             [
-                                                                'name' => 'Visio-conférences',
-                                                                'alias' => 'visio_conference',
+                                                                'name' => 'V-conférences',
+                                                                'alias' => 'V_conference',
                                                             ],
                                                         ];
                                                     @endphp
-                                                    <div class="row">
+                                                    <div class="block">
                                                         @foreach ($communications as $item)
                                                             <div class="col-auto">
                                                                 <div class="form-check">
                                                                     <input class="form-check-input" type="checkbox"
                                                                         id="communication_{{ $item['alias'] }}"
                                                                         name="communication[]"
-                                                                        value="{{ $item['name'] }}">
+                                                                        value="{{ $item['name'] }}"
+                                                                        style="margin-left:50px" 
+                                                                        >
                                                                     <label class="form-check-label"
                                                                         for="communication_{{ $item['alias'] }}"">
                                                                         {{ $item['name'] }}
@@ -447,7 +448,7 @@
                                                                     <span class="input-group-text">€</span>
                                                                     <input type="number" class="form-control"
                                                                         placeholder="00" id="budget_from"
-                                                                        name="budget_from" />
+                                                                        name="budget" />
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -472,147 +473,77 @@
                                         </div>
                                     </div>
                                     <hr class="mb-3">
-                                    <div class="col-12">
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <div class="table-responsive text-nowrap">
-                                                    <table class="table table table-bordered">
-                                                        <thead>
-                                                            <tr>
-                                                                <td rowspan="15"
-                                                                    style="text-align: center; vertical-align: middle;">
-                                                                    Délais
-                                                                    &
-                                                                    Budgétisation</td>
-                                                                <td>Désignation</td>
-                                                                <td>Nombre de jours</td>
-                                                                <td>Montant unitaire</td>
-                                                                <td>Total HT</td>
-                                                            </tr>
-                                                            @php
-                                                                $budgetisation = [
-                                                                    [
-                                                                        'title' => "Installation de l'environnement",
-                                                                        'alias' => 'installation-environnement',
-                                                                        'name' => 'installation_environment',
-                                                                    ],
-                                                                    [
-                                                                        'title' => 'Intégration de la structure',
-                                                                        'alias' => 'integration-structure',
-                                                                        'name' => 'integration_structure',
-                                                                    ],
-                                                                    [
-                                                                        'title' => 'Ebauche Des Textes et traductions',
-                                                                        'alias' => 'ebauche-textes-traductions',
-                                                                        'name' => 'draft_texts_translations',
-                                                                    ],
-                                                                    [
-                                                                        'title' => 'Maquettage graphique',
-                                                                        'alias' => 'maquettage-graphique',
-                                                                        'name' => 'graphic_modeling',
-                                                                    ],
-                                                                    [
-                                                                        'title' => 'Développement & intégrations web',
-                                                                        'alias' => 'developpement-integrations-web',
-                                                                        'name' => 'web_development_integrations',
-                                                                    ],
-                                                                    [
-                                                                        'title' => 'Intégration des textes et images',
-                                                                        'alias' => 'integration-textes-images',
-                                                                        'name' => 'text_image_integration',
-                                                                    ],
-                                                                    [
-                                                                        'title' =>
-                                                                            "Intégration d'autres pages (contact, catégories ...etc.)",
-                                                                        'alias' => 'integration-autres-pages',
-                                                                        'name' => 'other_pages_integration',
-                                                                    ],
-                                                                    [
-                                                                        'title' => 'Optimisation de la version Mobile',
-                                                                        'alias' => 'optimisation-version-mobile',
-                                                                        'name' => 'mobile_version_optimization',
-                                                                    ],
-                                                                    [
-                                                                        'title' => 'Intégration du multilingue',
-                                                                        'alias' => 'integration-multilingue',
-                                                                        'name' => 'multilingual_integration',
-                                                                    ],
-                                                                    [
-                                                                        'title' => 'Optimisation Pour SEO',
-                                                                        'alias' => 'optimisation-seo',
-                                                                        'name' => 'seo_optimisation',
-                                                                    ],
-                                                                    [
-                                                                        'title' => 'Suivi et tests',
-                                                                        'alias' => 'suivi-tests',
-                                                                        'name' => 'testing_tracking',
-                                                                    ],
-                                                                    [
-                                                                        'title' => 'Gestion de projets',
-                                                                        'alias' => 'gestion-projet',
-                                                                        'name' => 'project_management',
-                                                                    ],
-                                                                ];
-                                                            @endphp
-                                                            @foreach ($budgetisation as $item)
-                                                                <tr>
-                                                                    <td class="p-0 px-3 py-1">{{ $item['title'] }}</td>
-                                                                    <td class="p-0 px-3 py-1">
-                                                                        <input type="number"
-                                                                            class="form-control form-control h-100"
-                                                                            placeholder="00" id="nj-{{ $item['alias'] }}"
-                                                                            name="number_of_days_{{ $item['name'] }}">
-                                                                    </td>
-                                                                    <td class="p-0 px-3 py-1">
-                                                                        <div
-                                                                            class="input-group input-group input-group-merge">
-                                                                            <span class="input-group-text py-0">€</span>
-                                                                            <input type="number"
-                                                                                class="form-control py-1" placeholder="00"
-                                                                                id="mu-{{ $item['alias'] }}"
-                                                                                name="unit_amount_{{ $item['name'] }}" />
-                                                                        </div>
-                                                                    </td>
-                                                                    <td class="p-0 px-3 py-1">
-                                                                        <div
-                                                                            class="input-group input-group input-group-merge">
-                                                                            <span class="input-group-text py-0">€</span>
-                                                                            <input type="number"
-                                                                                class="form-control py-1" placeholder="00"
-                                                                                readonly id="total-{{ $item['alias'] }}"
-                                                                                name="total_{{ $item['name'] }}" />
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>
-                                                            @endforeach
-                                                            <tr>
-                                                                <td class="p-0 px-3 py-1">Remise exceptionnelle </td>
-                                                                <td class="p-0 px-3 py-1" colspan="3">
-                                                                    <div class="input-group input-group-merge">
-                                                                        <span class="input-group-text">€</span>
-                                                                        <input type="number" class="form-control"
-                                                                            placeholder="00" id="remise-exceptionnelle"
-                                                                            name="exceptional_discount" />
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="p-0 px-3 py-1">Total (HT) </td>
-                                                                <td class="p-0 px-3 py-1" colspan="3">
-                                                                    <div class="input-group input-group-merge">
-                                                                        <span class="input-group-text">€</span>
-                                                                        <input type="number" class="form-control"
-                                                                            placeholder="00" readonly id="total-total"
-                                                                            name="total" />
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                        </thead>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                            <hr class="my-5">
-                                            <div id="pourcentages">
+                                    <div class="col-12" style="    margin-top: -100px;">
+                                    <div class="table-responsive text-nowrap">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th rowspan="15" class="text-center align-middle">Délais &<br> Budgétisation</th>
+                                                    <th>Désignation</th>
+                                                    <th>Nombre de jours</th>
+                                                    <th>Montant unitaire</th>
+                                                    <th>Total HT</th>
+                                                </tr>
+                                                @php
+                                                    $budgetisation = [
+                                                        ['title' => "Installation de l'environnement", 'alias' => 'installation-environnement', 'name' => 'installation_environment'],
+                                                        ['title' => 'Intégration de la structure', 'alias' => 'integration-structure', 'name' => 'integration_structure'],
+                                                        ['title' => 'Ebauche Des Textes et traductions', 'alias' => 'ebauche-textes-traductions', 'name' => 'draft_texts_translations'],
+                                                        ['title' => 'Maquettage graphique', 'alias' => 'maquettage-graphique', 'name' => 'graphic_modeling'],
+                                                        ['title' => 'Développement & intégrations web', 'alias' => 'developpement-integrations-web', 'name' => 'web_development_integrations'],
+                                                        ['title' => 'Intégration des textes et images', 'alias' => 'integration-textes-images', 'name' => 'text_image_integration'],
+                                                        ['title' => "Intégration d'autres pages (contact, catégories ...etc.)", 'alias' => 'integration-autres-pages', 'name' => 'other_pages_integration'],
+                                                        ['title' => 'Optimisation de la version Mobile', 'alias' => 'optimisation-version-mobile', 'name' => 'mobile_version_optimization'],
+                                                        ['title' => 'Intégration du multilingue', 'alias' => 'integration-multilingue', 'name' => 'multilingual_integration'],
+                                                        ['title' => 'Optimisation Pour SEO', 'alias' => 'optimisation-seo', 'name' => 'seo_optimisation'],
+                                                        ['title' => 'Suivi et tests', 'alias' => 'suivi-tests', 'name' => 'testing_tracking'],
+                                                        ['title' => 'Gestion de projets', 'alias' => 'gestion-projet', 'name' => 'project_management'],
+                                                    ];
+                                                @endphp
+                                                @foreach ($budgetisation as $item)
+                                                    <tr>
+                                                        <td class="p-0 px-3 py-1">{{ $item['title'] }}</td>
+                                                        <td class="p-0 px-3 py-1">
+                                                            <input type="number" class="form-control form-control-sm" placeholder="00" id="nj-{{ $item['alias'] }}" name="number_of_days_{{ $item['name'] }}">
+                                                        </td>
+                                                        <td class="p-0 px-3 py-1">
+                                                            <div class="input-group input-group-sm">
+                                                                <span class="input-group-text py-0">€</span>
+                                                                <input type="number" class="form-control form-control-sm" placeholder="00" id="mu-{{ $item['alias'] }}" name="unit_amount_{{ $item['name'] }}" />
+                                                            </div>
+                                                        </td>
+                                                        <td class="p-0 px-3 py-1">
+                                                            <div class="input-group input-group-sm">
+                                                                <span class="input-group-text py-0">€</span>
+                                                                <input type="number" class="form-control form-control-sm" placeholder="00" readonly id="total-{{ $item['alias'] }}" name="total_{{ $item['name'] }}" />
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                @endforeach
+                                                <tr>
+                                                    <td class="p-0 px-3 py-1">Remise exceptionnelle</td>
+                                                    <td class="p-0 px-3 py-1" colspan="3">
+                                                        <div class="input-group input-group-sm">
+                                                            <span class="input-group-text">€</span>
+                                                            <input type="number" class="form-control form-control-sm" placeholder="00" id="remise-exceptionnelle" name="exceptional_discount" />
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="p-0 px-3 py-1">Total (HT)</td>
+                                                    <td class="p-0 px-3 py-1" colspan="3">
+                                                        <div class="input-group input-group-sm">
+                                                            <span class="input-group-text">€</span>
+                                                            <input type="number" class="form-control form-control-sm" placeholder="00" readonly id="total-total" name="total" />
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                    </div>
+                                </div>
+                                <hr class="my-5">
+                                    <div id="pourcentages">
                                                 @php
                                                     $index = 1;
                                                 @endphp
@@ -685,7 +616,8 @@
                                                                             data-bs-placement="top" title="Ajouter"
                                                                             class="btn btn-icon btn-label-primary waves-effect waves-light"
                                                                             id="plus-btn-{{ $index }}">
-                                                                            <i class="ti ti-plus"></i>
+                                                                            <i class="fa fa-plus me-2"></i>
+
                                                                         </button>
                                                                     @endif
                                                                 </div>
@@ -695,7 +627,7 @@
                                                                             data-bs-placement="top" title="Supprimer"
                                                                             class="btn btn-icon  btn-label-danger waves-effect waves-light"
                                                                             id="delete-btn-{{ $index }}">
-                                                                            <i class="ti ti-trash"></i>
+                                                                            <i class="fa fa-minus me-2"></i>
                                                                         </button>
                                                                     @endif
                                                                 </div>
@@ -753,16 +685,13 @@
                                                         $index++;
                                                     @endphp
                                                 @endfor
-                                            </div>
-
-                                        </div>
                                     </div>
-                    </div>                
-                    <div class="index-btn-wrapper">
-                        <div class="index-btn"onclick="run(5,4)">Previous</div>
-                        <div class="index-btn"onclick="run(5,6)">Next</div>
-                    </div>
-                </div>
+                            </div>                
+                            <div class="index-btn-wrapper">
+                                <div class="index-btn"onclick="run(5,4)">Previous</div>
+                                <div class="index-btn"onclick="run(5,6)">Next</div>
+                            </div>
+                        </div>
                 <div class="tab" id="tab-6">
                     <p>confirmation:</p>
     
@@ -939,6 +868,497 @@
 
 
 
+        </script> 
+        <script>
+        $(document).ready(function() {
+            generateByAi(`descriptionEntreprise`, 1);
+            generateByAi(`activitePrincipale`, 1);
+            generateByAi(`servicesProduits`, 1);
+            generateByAi(`target_audience`, 1);
+            generateByAi(`expectedObjectives`, 2);
+            generateByAi(`iatext_techniques_specs`, 2);
+            generateByAi(`iatext_menu`, 4);
+            generateByAi(`iatext_competitors`, 3);
+            generateByAi(`iatext_constraints`, 3);
+            generateByAi(`iatext_target_keywords`, 2);
+            generateByAi(`iatext_exemples_sites`, 4);
+            $('input[name="project_type"]').change(function() {
+                if ($(this).val() === 'E-commerce') {
+                    $('#options-paiement-container').removeClass('d-none');
+                } else {
+                    $('#options-paiement-container').addClass('d-none');
+                }
+            });
+
+            $('#nombrePropositions').change(function() {
+                let numberOfPropositions = $(this).val();
+                if ($(this).val() === 'autre') {
+                    $('#autreProposition').val('')
+                    $('#autrePropositionInput').show();
+                } else {
+                    $('#autreProposition').val(numberOfPropositions)
+                    $('#autrePropositionInput').hide();
+                }
+            });
+
+            for (let i = 1; i < 11; i++) {
+                $(`#plus-btn-${i}`).click(function() {
+                    console.log('clicked');
+                    $(`#pourcentage-${i+1}`).removeClass('d-none');
+                })
+
+                $(`#titre-operation-${i}`).on('input', function() {
+                    console.log($(this).val());
+                    $(`#label-pourcentage-operation-${i}`).text($(this).val());
+                });
+
+                $(`#delete-btn-${i}`).click(function() {
+                    $(`#pourcentage-value-${i}`).val('');
+                    $(`#pourcentage-operation-${i}`).val('');
+                    $(`#titre-operation-${i}`).val('');
+                    calculReste();
+                });
+
+                $(`#pourcentage-operation-${i}`).on('input', function() {
+                    calculReste();
+                });
+            }
+
+            const designations = ['installation-environnement', 'integration-structure',
+                'ebauche-textes-traductions',
+                'maquettage-graphique', 'developpement-integrations-web', 'integration-textes-images',
+                'integration-autres-pages', 'optimisation-version-mobile', 'integration-multilingue',
+                'optimisation-seo', 'suivi-tests', 'gestion-projet'
+            ];
+
+            designations.forEach(element => {
+                $(`#nj-${element}, #mu-${element}`).on('input', function() {
+                    if ($(`#nj-${element}`).val() && $(`#mu-${element}`).val()) {
+                        let njVal = $(`#nj-${element}`).val() ? parseFloat($(`#nj-${element}`)
+                            .val()) : 0;
+                        let muVal = $(`#mu-${element}`).val() ? parseFloat($(`#mu-${element}`)
+                            .val()) : 0;
+                        $(`#total-${element}`).val(njVal * muVal);
+                    } else {
+                        $(`#total-${element}`).val('');
+                    }
+                    calculTotal()
+                    calculReste()
+                    calculMaintenance()
+                })
+            });
+
+            $('#remise-exceptionnelle').on('input', function() {
+                calculTotal()
+                calculReste()
+                calculMaintenance()
+            })
+
+            $('#pourcentage-operation-maintenance').on('input', function() {
+                calculTotal()
+                calculReste()
+                calculMaintenance()
+            })
+
+            calculReste();
+            calculMaintenance();
+
+            // Get all the checkboxes
+            const checkboxes = document.querySelectorAll('input[name="payment_options[]"]');
+
+            // Event listener for the "Aucun" checkbox
+            const aucunCheckbox = document.getElementById('paiement_aucun');
+            aucunCheckbox.addEventListener('change', function() {
+                if (this.checked) {
+                    checkboxes.forEach(function(checkbox) {
+                        if (checkbox !== aucunCheckbox) {
+                            checkbox.checked = false;
+                        }
+                    });
+                }
+            });
+
+            // Event listener for the other checkboxes
+            checkboxes.forEach(function(checkbox) {
+                if (checkbox !== aucunCheckbox) {
+                    checkbox.addEventListener('change', function() {
+                        if (this.checked) {
+                            aucunCheckbox.checked = false;
+                        }
+                    });
+                }
+            });
+
+            $('#next-step-1').on('click', function() {
+                if (1) {
+                    localStorage.removeItem('askToChatGpt');
+                    console.log('eeeeee', $('#website').val());
+                    let nomEntreprise = $('#website').val() ? $('#website').val() : $('#nomEntreprise')
+                        .val();
+                    console.log(nomEntreprise);
+
+                    if (nomEntreprise) {
+                        $('#descriptionEntrepriseAi').val(
+                            `étant qu’expert en rédaction des cahiers des charges pour le développement d’un site internet, écrire moi un paragraphe sur description de ce client: ${nomEntreprise}`
+                        ).prop('title',
+                            `étant qu’expert en rédaction des cahiers des charges pour le développement d’un site internet, écrire moi un paragraphe sur description de ce client: ${nomEntreprise}`
+                        ).trigger('input');
+
+                        $('#activitePrincipaleAi').val(
+                            `étant qu’expert en rédaction des cahiers des charges pour le développement d’un site internet, écrire moi un paragraphe sur l’activité de ce client: ${nomEntreprise}`
+                        ).prop('title',
+                            `étant qu’expert en rédaction des cahiers des charges pour le développement d’un site internet, écrire moi un paragraphe sur l’activité de ce client: ${nomEntreprise}`
+                        ).trigger('input');
+
+                        $('#servicesProduitsAi').val(
+                            `étant qu’expert en rédaction des cahiers des charges pour le développement d’un site internet, écrire moi un paragraphe sur les services ou les produits vendu de ce client: ${nomEntreprise}`
+                        ).prop('title',
+                            `étant qu’expert en rédaction des cahiers des charges pour le développement d’un site internet, écrire moi un paragraphe sur les services ou les produits vendu de ce client: ${nomEntreprise}`
+                        ).trigger('input');
+
+                        $('#target_audienceAi').val(
+                            `étant qu’expert en rédaction des cahiers des charges pour le développement d’un site internet, écrire moi un paragraphe sur le public cible de ce client : ${nomEntreprise}`
+                        ).prop('title',
+                            `étant qu’expert en rédaction des cahiers des charges pour le développement d’un site internet, écrire moi un paragraphe sur le public cible de ce client : ${nomEntreprise}`
+                        ).trigger('input');
+                    } else {
+                        $('#descriptionEntrepriseAi').val(``).prop('title', ``).trigger('input');
+                        $('#activitePrincipaleAi').val(``).prop('title', ``).trigger('input');
+                        $('#servicesProduitsAi').val(``).prop('title', ``).trigger('input');
+                        $('#target_audienceAi').val(``).prop('title', ``).trigger('input');
+                    }
+
+                    if ($('#descriptionEntrepriseAi').val() && (!$('#descriptionEntreprise').val())) {
+                        $('#descriptionEntrepriseAi-generate').click();
+                    }
+                    // setTimeout(() => {
+                    if ($('#activitePrincipaleAi').val() && (!$('#activitePrincipale').val())) {
+                        $('#activitePrincipaleAi-generate').click();
+                    }
+                    // }, 10000);
+                    // setTimeout(() => {
+                    if ($('#servicesProduitsAi').val() && (!$('#servicesProduits').val())) {
+                        $('#servicesProduitsAi-generate').click();
+                    }
+                    // }, 20000);
+                    // setTimeout(() => {
+                    if ($('#target_audienceAi').val() && (!$('#target_audience').val())) {
+                        $('#target_audienceAi-generate').click();
+                    }
+                }
+            });
+
+            // $('#has_website_non').click(function() {
+            //     // TODO
+            //     // $('#target_audienceAi-generate').click();
+            // });
+
+            // $('#website').on('blur', function() {
+            //     // TODO
+            //     // $('#target_audienceAi-generate').click();
+            // });
+
+            $('#next-step-2').on('click', function() {
+                let objectifsAttendus = $('#objectifsAttendus').val();
+                console.log(objectifsAttendus);
+                if (objectifsAttendus) {
+                    $('#expectedObjectivesAi').val(
+                        `étant qu’expert en rédaction des cahiers des charges pour le développement d’un site internet, les objectifs : (${objectifsAttendus}), réécrire moi un paragraphe sur les objectifs attendu de ce client`
+                    ).prop('title',
+                        `étant qu’expert en rédaction des cahiers des charges pour le développement d’un site internet, les objectifs : (${objectifsAttendus}), réécrire moi un paragraphe sur les objectifs attendu de ce client`
+                    ).trigger('input');
+                } else {
+                    $('#expectedObjectivesAi').val('').prop('title', '').trigger('input');
+                }
+
+                if ($('#expectedObjectivesAi').val() && !$('#expectedObjectives').val()) {
+                    // TODO
+                    $('#expectedObjectives').text('');
+                    $('#expectedObjectivesAi-generate').click();
+                }
+                // TODO
+            });
+
+            $('#next-step-2').on('click', function() {
+                let target_keywords = $('#target_keywords').val().split('\n').join(',');
+                console.log(target_keywords);
+
+                if (target_keywords) {
+                    $('#iatext_target_keywordsAi').val(
+                        `dans la section de Stratégies de Référencement en Mots-clés cibles sur le cahier de
+  charge de son site internet à envoyer au client merci d'élaborer cette phrase dans deux
+  paragraphes : (${target_keywords})`
+                    ).prop('title',
+                        `dans la section de Stratégies de Référencement en Mots-clés cibles sur le cahier de
+  charge de son site internet à envoyer au client merci d'élaborer cette phrase dans deux
+  paragraphes : (${target_keywords})`
+                    ).trigger('input');
+                } else {
+                    $('#iatext_target_keywordsAi').val('').prop('title', '').trigger('input');
+                }
+
+                if ($('#iatext_target_keywordsAi').val() && !$('#iatext_target_keywords').val()) {
+
+                    // TODO
+                    $('#iatext_target_keywords').text('');
+                    $('#iatext_target_keywordsAi-generate').click();
+                }
+            });
+
+            $('#next-step-2').on('click', function() {
+                let menu = $('#menu').val();
+                var project_type = $('input[name="project_type"]').val();
+                var servicesProduits = $('#servicesProduits').val();
+                console.log(menu);
+                console.log(project_type);
+                console.log(servicesProduits);
+                if (menu) {
+
+                    console.log(
+                        `à partir de cette liste de menu : [${menu}], rédiger et designer moi une sitemap (arborescence) pour un site Internet [${project_type}] de [${servicesProduits}]`
+                    );
+                    $('#iatext_menuAi').val(
+                        `à partir de cette liste de menu : [${menu}], rédiger et designer moi une sitemap (arborescence) pour un site Internet [${project_type}] de [${servicesProduits}]`
+                    ).prop('title',
+                        `à partir de cette liste de menu : [${menu}], rédiger et designer moi une sitemap (arborescence) pour un site Internet [${project_type}] de [${servicesProduits}]`
+                    ).trigger('input');
+
+
+                    if ($('#iatext_menuAi').val() && !$('#iatext_menu').val()) {
+
+                        // TODO
+                        $('#iatext_menu').text('');
+                        $('#iatext_menuAi-generate').click();
+                    }
+
+                    // TODO
+                }
+            });
+
+
+            $('#next-step-2').on('click', function() {
+                let techniques_specs = $('#techniques_specs').val();
+                console.log(techniques_specs);
+
+                console.log(
+                    `étant qu’expert en rédaction des cahiers des charges pour le développement d’un site internet, récrire moi en 3 paragraphes les spécifications techniques (${techniques_specs}) que le client souhaite avoir sur son site`
+                );
+                if (techniques_specs) {
+                    $('#iatext_techniques_specsAi').val(
+                        `étant qu’expert en rédaction des cahiers des charges pour le développement d’un site internet, récrire moi en 3 paragraphes les spécifications techniques (${techniques_specs}) que le client souhaite avoir sur son site`
+                    ).prop('title',
+                        `étant qu’expert en rédaction des cahiers des charges pour le développement d’un site internet, récrire moi en 3 paragraphes les spécifications techniques (${techniques_specs}) que le client souhaite avoir sur son site`
+                    ).trigger('input');
+                }
+
+                if ($('#iatext_techniques_specsAi').val() && !$('#iatext_techniques_specs').val()) {
+                    // TODO
+                    $('#iatext_techniques_specs').text('');
+                    $('#iatext_techniques_specsAi-generate').click();
+                }
+            });
+
+            $('#next-step-3').on('click', function() {
+                let concurrents = $('#concurrents').val().split('\n').join(',');
+                console.log(concurrents);
+
+                if (concurrents) {
+                    $('#iatext_competitorsAi').val(
+                        `voici les concurrents (${concurrents}), étant qu’expert en rédaction des cahiers des charges pour le développement d’un site internet, écrire moi deux paragraphe sur l’analyse des principaux concurrents et identification des points forts à intégrer sur le site internet que le client souhaite`
+                    ).prop('title',
+                        `voici les concurrents (${concurrents}), étant qu’expert en rédaction des cahiers des charges pour le développement d’un site internet, écrire moi deux paragraphe sur l’analyse des principaux concurrents et identification des points forts à intégrer sur le site internet que le client souhaite`
+                    ).trigger('input');
+                } else {
+                    $('#iatext_competitorsAi').val('').prop('title', '').trigger('input');
+                }
+
+                if ($('#iatext_competitorsAi').val() && !$('#iatext_competitors').val()) {
+
+                    // TODO
+                    $('#iatext_competitors').text('');
+                    $('#iatext_competitorsAi-generate').click();
+                }
+            });
+
+
+
+            $('#next-step-4').on('click', function() {
+                let exemples_sites = $('#exemples-sites').val().split('\n').join(',');
+                console.log(exemples_sites);
+
+                console.log(
+                    `écrire un paragraphe détaillé pour élaborer Les éléments suivants (${exemples_sites}) que le client voulait inclure sur le
+site internet sur le cahier de charge de son site internet`
+                );
+                if (exemples_sites) {
+                    $('#iatext_exemples_sitesAi').val(
+                        `écrire un paragraphe détaillé pour élaborer Les éléments suivants (${exemples_sites}) que le client voulait inclure sur le
+site internet sur le cahier de charge de son site internet`
+                    ).prop('title',
+                        `écrire un paragraphe détaillé pour élaborer Les éléments suivants (${exemples_sites}) que le client voulait inclure sur le
+site internet sur le cahier de charge de son site internet`
+                    ).trigger('input');
+                } else {
+                    $('#iatext_exemples_sitesAi').val(
+                        ``
+                    ).prop('title',
+                        ``
+                    ).trigger('input');
+                }
+
+
+                if ($('#iatext_exemples_sitesAi').val() && !$('#iatext_exemples_sites').val()) {
+                    // TODO
+                    $('#iatext_exemples_sites').text('');
+                    $('#iatext_exemples_sitesAi-generate').click();
+                }
+            });
+
+            $('#next-step-3').on('click', function() {
+                let contraintes = $('#contraintes').val();
+                console.log(contraintes);
+
+                console.log(
+                    `étant qu’expert en rédaction des cahiers des charges pour le développement d’un site internet, récrire moi en 3 paragraphes les spécifications techniques (${contraintes}) que le client souhaite avoir sur son site`
+                );
+                if (contraintes) {
+                    $('#iatext_constraintsAi').val(
+                        `étant qu’expert en rédaction des cahiers des charges pour le développement d’un site internet, récrire moi en 3 paragraphes les spécifications techniques (${contraintes}) que le client souhaite avoir sur son site`
+                    ).prop('title',
+                        `étant qu’expert en rédaction des cahiers des charges pour le développement d’un site internet, récrire moi en 3 paragraphes les spécifications techniques (${contraintes}) que le client souhaite avoir sur son site`
+                    ).trigger('input');
+                } else {
+                    $('#iatext_constraintsAi').val(
+                        ``
+                    ).prop('title',
+                        ``
+                    ).trigger('input');
+                }
+
+
+                if ($('#iatext_constraintsAi').val() && !$('#iatext_constraints').val()) {
+
+                    // TODO
+                    $('#iatext_constraints').text('');
+                    $('#iatext_constraintsAi-generate').click();
+                }
+            });
+        });
+
+        function generateByAi(element, step) {
+            $(`#${element}Ai`).on("input", function() {
+                if ($(`#${element}Ai`).val().trim().length > 3) {
+                    $(`#${element}Ai-generate`).prop("disabled", false);
+                } else {
+                    $(`#${element}Ai-generate`).prop("disabled", true);
+                }
+            });
+            if (!$(`#${element}Ai-generate`).data('errorCount')) {
+                $(`#${element}Ai-generate`).data('errorCount', 0);
+            }
+
+            $(`#${element}Ai-generate`).click(function() {
+                $(`#${element}Ai-generate`).html(
+                    `<i class="ti ti-loader rotate"></i> &nbsp; Chargement ...`);
+                $(`#${element}Ai-generate`).prop("disabled", true);
+                $(`#${element}`).text('');
+                var promptText = $(`#${element}Ai`).val();
+                $(`#${element}`).text('loading');
+                $.ajax({
+                    url: '',
+                    type: 'GET',
+                    data: {
+                        prompt: promptText
+                    },
+                    success: function(response) {
+                        $(`#${element}Ai-generate`).html(
+                            ` <i class="ti ti-file-text-ai"></i> &nbsp; Générer`);
+                        $(`#${element}Ai-generate`).prop("disabled", false);
+                        $(`#${element}`).text(response);
+                        window.localStorage.setItem('askToChatGpt', element);
+                        $(`#next-step-${step}`).removeClass('disabled');
+                        $(`#icon-next-step-${step}`).removeClass().addClass('ti ti-arrow-right');
+                        console.log('success');
+                    },
+                    error: function(xhr, status, error) {
+                        let errorCount = $(`#${element}Ai-generate`).data('errorCount');
+                        if (errorCount < 5) { // Check if error count is less than 5
+                            errorCount++; // Increment error count
+                            $(`#${element}Ai-generate`).data('errorCount', errorCount);
+                            setTimeout(() => {
+                                $(`#${element}Ai-generate`).html(
+                                    `<i class="ti ti-file-text-ai"></i> &nbsp; Générer`);
+                                $(`#${element}Ai-generate`).prop("disabled", false);
+                                $(`#${element}Ai-generate`).click();
+                            }, 10000);
+                        } else {
+                            $(`#${element}`).text("error");
+                            console.error("Error occurred 5 times. Stopping further error handling.");
+                        }
+                        console.error({
+                            xhr,
+                            status,
+                            error
+                        });
+                    }
+                });
+            });
+
+            $('input[name="has_website"]').change(function() {
+                if ($(this).val() === 'oui') {
+                    $('#websiteInput').show();
+                } else {
+                    $('#websiteInput').hide();
+                }
+            });
+
+        }
+
+        const designations = ['installation-environnement', 'integration-structure', 'ebauche-textes-traductions',
+            'maquettage-graphique', 'developpement-integrations-web', 'integration-textes-images',
+            'integration-autres-pages', 'optimisation-version-mobile', 'integration-multilingue',
+            'optimisation-seo', 'suivi-tests', 'gestion-projet'
+        ];
+
+        function calculTotal() {
+            let total = 0;
+            let totalItem;
+            designations.forEach(element => {
+                totalItem = $(`#total-${element}`).val() ? parseFloat($(`#total-${element}`).val()) : 0;
+                total += totalItem;
+            });
+            let remise_exceptionnelle = $('#remise-exceptionnelle').val() ? parseFloat($(`#remise-exceptionnelle`).val()) :
+                0;;
+
+            $('#total-total').val((total - remise_exceptionnelle).toFixed(2))
+        }
+
+        function calculMaintenance() {
+            let pourcentageMaintenance = $('#pourcentage-operation-maintenance').val() ? parseFloat($(
+                `#pourcentage-operation-maintenance`).val()) : 0;
+            let total = $(`#total-total`).val() ? parseFloat($(`#total-total`).val()) : 0;
+            let percentageAmount = (pourcentageMaintenance / 100) * total;
+            $('#pourcentage-value-maintenance').val((percentageAmount).toFixed(2));
+        }
+
+        function calculReste() {
+            for (let i = 1; i < 11; i++) {
+                let total = $(`#total-total`).val() ? parseFloat($(`#total-total`).val()) : 0;
+                let percentageNumber = $(`#pourcentage-operation-${i}`).val();
+                var percentageAmount = (percentageNumber / 100) * total;
+                $(`#pourcentage-value-${i}`).val((percentageAmount).toFixed(2));
+                let reste = 0;
+                let totalAvance = 0;
+                for (let i = 1; i < 11; i++) {
+                    let avanceValue = $(`#pourcentage-value-${i}`).val() ?
+                        parseFloat($(`#pourcentage-value-${i}`).val()) : 0;
+                    totalAvance += avanceValue;
+                }
+                $('#reste').val((total - totalAvance).toFixed(2));
+            }
+        }
         </script>
+    
+   
  
 @endsection
