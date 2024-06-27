@@ -26,7 +26,7 @@
                     <p class="my-4" >Présentation de l'entreprise:</p>
                     <div class="input-group">
                         <div class="input-wrapper">
-                        <label for="Nom_de_l'entreprise">Nom de l'entreprise <span style="color: red;" >*</span> </label>
+                        <label for="Nom_de_lentreprise">Nom de l'entreprise <span style="color: red;" >*</span> </label>
                         <input type="text" placeholder="Havet digitale" name="Nom_de_l'entreprise">
                         </div>
                         <div class="input-wrapper">
@@ -64,7 +64,7 @@
                         <input type="text" placeholder="Cible" name="Cible">
                         </div>
                         <div class="input-wrapper">
-                        <label for="Personne à contacter">Personne à contacter<span style="color: red;" >*</span> </label>
+                        <label for="Personne_a_contacter">Personne à contacter<span style="color: red;" >*</span> </label>
                         <input type="Personne à contacter"  placeholder="Personne à contacter (nom et prénom)"  name="Personne_a_contacter">
                         </div>
                     </div>
@@ -89,7 +89,7 @@
                     <div class="input-wrapper">
                     <legend>Your favorite technologies    <span style="color: red;" >*</span>     </legend>        
                     <fieldset style="     width: 750px;   display: flex; flex-wrap: wrap; " >
-                    <div style="width:33%;display:block;line-height:5px">
+                                <div style="width:33%;display:block;line-height:5px">
                                     <label style="    margin-right: -208px;" ><input type="checkbox" name="Formulaire de contact" value="Formulaire de contact" checked> Formulaire de contact</label><br />
                                     <label style="    margin-right: -208px;" ><input type="checkbox" name="Géolocalisation" value="Géolocalisation"> Géolocalisation</label><br />
                                     <label style="    margin-right: -208px;" ><input type="checkbox" name="Besoin des APIs" value="Besoin des APIs"> Besoin des APIs</label><br />
@@ -804,44 +804,68 @@
                 var regex = /^[a-zA-ZÀ-ÿ\s,':-]+$/;
                 if (!regex.test(y[i].value)) {
                     $(y[i]).css({ "border-color": "#ff5555" });
+                    $("label[for='Nom_de_lentreprise']").css({ "color": "#ff5555" });
                     return false;
                 }
             } else if (y[i].name == "Email") {
                 var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                 if (!regex.test(y[i].value)) {
                     $(y[i]).css({ "border-color": "#ff5555" });
+                    $("label[for='email']").css({ "color": "#ff5555" });
                     return false;
                 }
             } else if (y[i].name == "Telephone") {
                 var regex = /^\+\d{1,3} \(\d{3}\) \d{3}-\d{4}$/;
                 if (!regex.test(y[i].value)) {
                     $(y[i]).css({ "border-color": "#ff5555" });
+                    $("label[for='phone']").css({ "color": "#ff5555" });
                     return false;
                 }
-            } else if (y[i].name == "Site_web_de_l'entreprise") {
-                var regex = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/;
-                if (!regex.test(y[i].value || y[i].value !== "" )) {
+            } else if (y[i].name == "Cible") {
+                var regex = /^[a-zA-ZÀ-ÿ\s,':-]+$/;
+                if (y[i].value === "" || !regex.test(y[i].value)) {
                     $(y[i]).css({ "border-color": "#ff5555" });
+                    $("label[for='Cible']").css({ "color": "#ff5555" });
                     return false;
+                }
+            } else if (y[i].name == "Personne_a_contacter") {
+                var regex = /^[a-zA-ZÀ-ÿ\s,':-]+$/;
+                if (y[i].value === "" || !regex.test(y[i].value)) {
+                    $(y[i]).css({ "border-color": "#ff5555" });
+                    $("label[for='Personne_a_contacter']").css({ "color": "#ff5555" });
+                    return false;
+                }
+            }else if (y[i].name == "Site_web_de_l'entreprise") {
+                if ($('#website-link-container').is(':visible')) {
+                    var regex = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/;
+                    if (!regex.test(y[i].value) || y[i].value === "") {
+                        $(y[i]).css({ "border-color": "#ff5555" });
+                        $("label[for='website-link']").css({ "color": "#ff5555" });
+                        return false;
+                    }
                 }
             } else if (y[i].name == "Menu") {
                 if (y[i].value.trim() == "") {
                     $(y[i]).css({ "border-color": "#ff5555" });
+                    $("label[for='langue']").css({ "color": "#ff5555" });
                     return false;
                 }
             } else if (y[i].name == "Mots-cles_cibles") {
                 if (y[i].value.trim() == "") {
                     $(y[i]).css({ "border-color": "#ff5555" });
+                    $("label[for='langue']").css({ "color": "#ff5555" });
                     return false;
                 }
             } else if (y[i].name == "Specifications_techniques") {
                 if (y[i].value.trim() == "") {
                     $(y[i]).css({ "border-color": "#ff5555" });
+                    $("label[for='langue']").css({ "color": "#ff5555" });
                     return false;
                 }
             } else if (y[i].name == "Objectifs_attendus") {
                 if (y[i].value.trim() == "") {
                     $(y[i]).css({ "border-color": "#ff5555" });
+                    $("label[for='langue']").css({ "color": "#ff5555" });
                     return false;
                 }
             } else if (y[i].name == "languages[]") {
