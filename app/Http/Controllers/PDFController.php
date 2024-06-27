@@ -9,17 +9,17 @@ class PDFController extends Controller
 {
     public function generatePDF(Request $request)
     {
-        $message = $request->query('message');
-        $response = $request->query('response');
-        $infos =  $request->query('infos') ;
-
+        $questions = $request->input('questions');
+        $responses = $request->input('responses');
+    
+ 
     
         $data =[
-            'message' => $message,
-            'response' => $response,
-            'infos' => $infos
+            'questions' => $questions,
+            'responses' => $responses,
+            
                ];
-
+               dd($data);
         $pdf = Pdf::loadView('PDF.file-pdf', $data);
         return $pdf->stream('cahier_de_charge.pdf');
     }

@@ -88,25 +88,25 @@
                     </div>
                     <div class="input-wrapper">
                     <legend>Your favorite technologies    <span style="color: red;" >*</span>     </legend>        
-                    <fieldset style="     width: 750px;   display: flex; flex-wrap: wrap; " >
-                                <div style="width:33%;display:block;line-height:5px">
-                                    <label style="    margin-right: -208px;" ><input type="checkbox" name="Formulaire de contact" value="Formulaire de contact" checked> Formulaire de contact</label><br />
-                                    <label style="    margin-right: -208px;" ><input type="checkbox" name="Géolocalisation" value="Géolocalisation"> Géolocalisation</label><br />
-                                    <label style="    margin-right: -208px;" ><input type="checkbox" name="Besoin des APIs" value="Besoin des APIs"> Besoin des APIs</label><br />
-                                    <label style="    margin-right: -208px;" ><input type="checkbox" name="Google Analytics" value="Google Analytics">Google Analytics</label><br />
-                                </div>
-                                <div style="width:33%;display:block;line-height:1px">
-                                    <label style="    margin-right: -208px;" ><input type="checkbox" name="Blog" value="Blog"> Blog</label><br />
-                                    <label style="    margin-right: -208px;" ><input type="checkbox" name="Capture des leads" value="Capture des leads"> Capture des leads</label><br />
-                                    <label style="    margin-right: -208px;" ><input type="checkbox" name="Calendly" value="Calendly">Calendly</label><br />
-                                    <label style="    margin-right: -208px;" ><input type="checkbox" name="Réseaux sociaux" value="Réseaux sociaux" checked> Réseaux sociaux</label><br />
-                                </div>
-                                <div style="width:33%;display:block;line-height:1px">
-                                    <label style="    margin-right: -208px;" ><input type="checkbox" name="Backoffice" value="Backoffice"> Backoffice</label><br />
-                                    <label style="    margin-right: -208px;" ><input type="checkbox" name="Plugins sur mesure" value="Plugins sur mesure"> Plugins sur mesure</label><br /> 
-                                    <label style="    margin-right: -208px;" ><input type="checkbox" name="Chatbotai" value="Chatbotai" checked> Chatbotai</label><br />
-                                </div> 
-                    </fieldset>
+                        <fieldset style="width: 750px;display: flex; flex-wrap: wrap; " >
+                                    <div style="width:33%;display:block;line-height:5px">
+                                        <label for="favorite_technologies" style="    margin-right: -208px;" ><input type="checkbox" name="favorite_technologies[]" value="Formulaire de contact" checked> Formulaire de contact</label><br />
+                                        <label for="favorite_technologies" style="    margin-right: -208px;" ><input type="checkbox" name="favorite_technologies[]" value="Géolocalisation"> Géolocalisation</label><br />
+                                        <label for="favorite_technologies" style="    margin-right: -208px;" ><input type="checkbox" name="favorite_technologies[]" value="Besoin des APIs"> Besoin des APIs</label><br />
+                                        <label for="favorite_technologies" style="    margin-right: -208px;" ><input type="checkbox" name="favorite_technologies[]" value="Google Analytics">Google Analytics</label><br />
+                                    </div>
+                                    <div style="width:33%;display:block;line-height:1px">
+                                        <label for="favorite_technologies" style="    margin-right: -208px;" ><input type="checkbox" name="favorite_technologies[]" value="Blog"> Blog</label><br />
+                                        <label for="favorite_technologies" style="    margin-right: -208px;" ><input type="checkbox" name="favorite_technologies[]" value="Capture des leads"> Capture des leads</label><br />
+                                        <label for="favorite_technologies" style="    margin-right: -208px;" ><input type="checkbox" name="favorite_technologies[]" value="Calendly">Calendly</label><br />
+                                        <label for="favorite_technologies" style="    margin-right: -208px;" ><input type="checkbox" name="favorite_technologies[]" value="Réseaux sociaux" checked> Réseaux sociaux</label><br />
+                                    </div>
+                                    <div style="width:33%;display:block;line-height:1px">
+                                        <label for="favorite_technologies" style="    margin-right: -208px;" ><input type="checkbox" name="favorite_technologies[]" value="Backoffice"> Backoffice</label><br />
+                                        <label for="favorite_technologies" style="    margin-right: -208px;" ><input type="checkbox" name="favorite_technologies[]" value="Plugins sur mesure"> Plugins sur mesure</label><br /> 
+                                        <label for="favorite_technologies" style="    margin-right: -208px;" ><input type="checkbox" name="favorite_technologies[]" value="Chatbotai" checked> Chatbotai</label><br />
+                                    </div> 
+                        </fieldset>
                     </div>
                  
                     </div>
@@ -175,8 +175,8 @@
                             <label for="demo2-2-b">Non</label>
                         </div>
                         <div id="website-link-container-2" style="display: none;">
-                        <label for="website-link">Hébergement <span style="color: red;" >*</span> </label>
-                        <input type="text" placeholder="Hébergement (si disponible)" id="website-link" name="Site_web_de_l'entreprise">
+                        <label for="website-link-2">Hébergement <span style="color: red;" >*</span> </label>
+                        <input type="text" placeholder="Hébergement (si disponible)" id="website-link" name="Hébergement">
                     </div>
               
                     </div>
@@ -190,7 +190,7 @@
                             <label for="demo2-3-b">Non</label>
                         </div>
                         <div id="website-link-container-3" style="display: none;">
-                        <label for="website-link">Domain <span style="color: red;" >*</span> </label>
+                        <label for="website-link-3">Domain <span style="color: red;" >*</span> </label>
                         <input type="text" placeholder="Nom de domaine (si disponible)" id="website-link" name="Nom_de_domaine">
                     </div>
               
@@ -252,8 +252,7 @@
                                 </tr>
                                 <tr>
                                 <td>
-                                Maquette / Wireframe
-
+                                     Maquette / Wireframe 
                                 </td>
                                 <td>
                          
@@ -314,11 +313,11 @@
                         </table>
                         </div>
                         <div class="input-wrapper">
-                        <label for="Palette de couleurs">Palette de couleurs :<span style="color: red;" >*</span> </label>
-                        <textarea style="border-radius:20px;     " type="text" name="Palette_de_couleurs" placeholder="Indiquez les couleurs souhaitées pour votre site."   ></textarea>
+                        <label for="Palette_de_couleurs">Palette de couleurs :<span style="color: red;" >*</span> </label>
+                        <textarea style="border-radius:20px;" type="text" name="Palette_de_couleurs" placeholder="Indiquez les couleurs souhaitées pour votre site."   ></textarea>
                      
-                        <label for="Exemples de sites avec commentaire">Exemples de sites avec commentaire :<span style="color: red;" >*</span> </label>
-                        <textarea style="border-radius:20px;    height: 126px;" type="text" name="Exemples de sites avec commentaire" placeholder="Ajoutez des exemples de sites que vous aimez avec des commentaires sur ce que vous aimez bien sur ces sites (éléments, animation, couleurs, architecture d’informations, fonctionnalités, etc.)."   ></textarea>
+                        <label for="Exemples_de_sites_avec_commentaire">Exemples de sites avec commentaire :<span style="color: red;" >*</span> </label>
+                        <textarea style="border-radius:20px;height: 126px;" type="text" name="Exemples_de_sites_avec_commentaire" placeholder="Ajoutez des exemples de sites que vous aimez avec des commentaires sur ce que vous aimez bien sur ces sites (éléments, animation, couleurs, architecture d’informations, fonctionnalités, etc.)."   ></textarea>
                         </div>
                     </div>
                     <div class="input-group">
@@ -800,6 +799,7 @@
         y = $(x).find("input, select, textarea");
 
         for (i = 0; i < y.length; i++) {
+            // premier step
          if (y[i].name == "Nom_de_l'entreprise") {
                 var regex = /^[a-zA-ZÀ-ÿ\s,':-]+$/;
                 if (!regex.test(y[i].value)) {
@@ -844,50 +844,120 @@
                         return false;
                     }
                 }
+
+                //deuxieme step
+            }else if (y[i].name == "favorite_technologies[]") {
+                        if (!y[i].checked) {
+                    $(y[i]).next('label').css('color', '#ff5555');
+                    isValid = false;
+                }
             } else if (y[i].name == "Menu") {
-                if (y[i].value.trim() == "") {
+                var regex = /^[a-zA-ZÀ-ÿ\s,':-]+$/;
+                if (y[i].value === "" || !regex.test(y[i].value)) {
                     $(y[i]).css({ "border-color": "#ff5555" });
-                    $("label[for='langue']").css({ "color": "#ff5555" });
+                    $("label[for='Menu']").css({ "color": "#ff5555" });
                     return false;
                 }
             } else if (y[i].name == "Mots-cles_cibles") {
-                if (y[i].value.trim() == "") {
+                var regex = /^[a-zA-ZÀ-ÿ\s,':-]+$/;
+                if (y[i].value === "" || !regex.test(y[i].value)) {
                     $(y[i]).css({ "border-color": "#ff5555" });
-                    $("label[for='langue']").css({ "color": "#ff5555" });
+                    $("label[for='Mots-cles_cibles']").css({ "color": "#ff5555" });
                     return false;
                 }
             } else if (y[i].name == "Specifications_techniques") {
-                if (y[i].value.trim() == "") {
+                var regex = /^[a-zA-ZÀ-ÿ\s,':-]+$/;
+                if (y[i].value === "" || !regex.test(y[i].value)) {
                     $(y[i]).css({ "border-color": "#ff5555" });
-                    $("label[for='langue']").css({ "color": "#ff5555" });
+                    $("label[for='Specifications_techniques']").css({ "color": "#ff5555" });
                     return false;
                 }
             } else if (y[i].name == "Objectifs_attendus") {
-                if (y[i].value.trim() == "") {
+                var regex = /^[a-zA-ZÀ-ÿ\s,':-]+$/;
+                if (y[i].value === "" || !regex.test(y[i].value)) {
                     $(y[i]).css({ "border-color": "#ff5555" });
-                    $("label[for='langue']").css({ "color": "#ff5555" });
+                    $("label[for='Objectifs_attendus']").css({ "color": "#ff5555" });
                     return false;
                 }
-            } else if (y[i].name == "languages[]") {
+            } else if (y[i].name == "Site_internet_de_vos_principaux_concurrents") {
+                var regex = /^[a-zA-ZÀ-ÿ\s,':-]+$/;
+                if (y[i].value === "" || !regex.test(y[i].value)) {
+                    $(y[i]).css({ "border-color": "#ff5555" });
+                    $("label[for='Site_internet_de_vos_principaux_concurrents']").css({ "color": "#ff5555" });
+                    return false;
+                }
+            }else if (y[i].name == "Contraintes") {
+                var regex = /^[a-zA-ZÀ-ÿ\s,':-]+$/;
+                if (y[i].value === "" || !regex.test(y[i].value)) {
+                    $(y[i]).css({ "border-color": "#ff5555" });
+                    $("label[for='Contraintes']").css({ "color": "#ff5555" });
+                    return false;
+                }
+            }else if (y[i].name == "Hébergement") {
+                if ($('#website-link-container-2').is(':visible')) {
+                    var regex = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/;
+                    if (!regex.test(y[i].value) || y[i].value === "") {
+                        $(y[i]).css({ "border-color": "#ff5555" });
+                        $("label[for='website-link-2']").css({ "color": "#ff5555" });
+                        return false;
+                    }
+                }
+            }else if (y[i].name == "Nom_de_domaine") {
+                if ($('#website-link-container-3').is(':visible')) {
+                    var regex = /^(?!:\/\/)([a-zA-Z0-9-_]{1,63}\.)+[a-zA-Z]{2,6}$/;
+                    if (!regex.test(y[i].value) || y[i].value === "") {
+                        $(y[i]).css({ "border-color": "#ff5555" });
+                        $("label[for='website-link-3']").css({ "color": "#ff5555" });
+                        return false;
+                    }
+                }
+            }else if (y[i].name == "Exemples_de_sites_avec_commentaires") {
+                var regex = /^[a-zA-ZÀ-ÿ\s,':-]+$/;
+                if (y[i].value === "" || !regex.test(y[i].value)) {
+                    $(y[i]).css({ "border-color": "#ff5555" });
+                    $("label[for='Exemples_de_sites_avec_commentaires']").css({ "color": "#ff5555" });
+                    return false;
+                }
+            }else if (y[i].name == "Palette_de_couleurs") {
+                var regex = /^[a-zA-ZÀ-ÿ\s,':-]+$/;
+                if (y[i].value === "" || !regex.test(y[i].value)) {
+                    $(y[i]).css({ "border-color": "#ff5555" });
+                    $("label[for='Palette_de_couleurs']").css({ "color": "#ff5555" });
+                    return false;
+                }
+            }else if (y[i].name == "Palette_de_couleurs") {
+                var regex = /^[a-zA-ZÀ-ÿ\s,':-]+$/;
+                if (y[i].value === "" || !regex.test(y[i].value)) {
+                    $(y[i]).css({ "border-color": "#ff5555" });
+                    $("label[for='Palette_de_couleurs']").css({ "color": "#ff5555" });
+                    return false;
+                }
+            }else if (y[i].name == "languages[]") {
                 if ($(y[i]).val() == "") {
                     $(y[i]).css({ "border-color": "#ff5555" });
                     $("label[for='langue']").css({ "color": "#ff5555" });
                     return false;
                 }
             }
+          
         }
+       
     } else {
         for (i = showTab + 1; i <= 6; i++) {
             $("#step-" + i).css("opacity", "0.25");
         }
     }
-
+  
     for (i = 1; i < showTab; i++) {
         $("#step-" + i).css("opacity", "1");
     }
+ 
     $("#tab-" + hideTab).css("display", "none");
     $("#tab-" + showTab).css("display", "block");
     $("input").css("background", "#fff");
+
+    
+  
 }
 
 
@@ -1072,16 +1142,7 @@
                 }
             });
 
-            // $('#has_website_non').click(function() {
-            //     // TODO
-            //     // $('#target_audienceAi-generate').click();
-            // });
-
-            // $('#website').on('blur', function() {
-            //     // TODO
-            //     // $('#target_audienceAi-generate').click();
-            // });
-
+    
             $('#next-step-2').on('click', function() {
                 let objectifsAttendus = $('#objectifsAttendus').val();
                 console.log(objectifsAttendus);
