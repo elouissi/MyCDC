@@ -210,4 +210,12 @@ a.article:hover {
     #sidebarCollapse span {
         display: none;
     }
+    .container-fluid{    
+    padding: 0px 13px;
+    margin-top: -8px;
+    }
+    .step-v{
+        display: none;
+    }
+    
 }

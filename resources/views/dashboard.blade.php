@@ -141,7 +141,7 @@
             <ul style="margin-left: 18px;" class="list-unstyled  ">
                 <li>
                 
-                <a href="#"><i style="margin-right: 20px;"class="fa fa-laptop me-2"></i>Acceuil</a>
+                <a href="{{route('accueil')}}"><i style="margin-right: 20px;"class="fa fa-laptop me-2"></i>Acceuil</a>
                 </li>
                 <li>
                     <a href="{{route('List')}}"><i style="margin-right: 20px;" class="fa-solid fa-book"></i>Liste des CDC</a>
@@ -150,17 +150,17 @@
                 <li class="">
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i style="margin-right: 10px;"  class="fa-solid fa-pen"></i>Créer un CDC Web</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li>
+                        <li class="active" >
                             <a href="{{route('siteVitrine')}}"><i class="fa-solid fa-circle"style="margin-right: 10px;" ></i>Site vitrine</a>
                         </li>
                         <li>
-                            <a href="{{route('mobile')}}"><i class="fa-solid fa-circle"style="margin-right: 10px;" ></i>E-commerce</a>
+                            <a href="{{route('ecommerce')}}"><i class="fa-solid fa-circle"style="margin-right: 10px;" ></i>E-commerce</a>
                         </li>
                         <li>
-                            <a href="{{route('e-commerce')}}"><i class="fa-solid fa-circle"style="margin-right: 10px;" ></i>Blog</a>
+                            <a href="{{route('Blog')}}"><i class="fa-solid fa-circle"style="margin-right: 10px;" ></i>Blog</a>
                         </li>
                         <li>
-                            <a href="{{route('e-commerce')}}"><i class="fa-solid fa-circle"style="margin-right: 10px;" ></i>site d'affiliation</a>
+                            <a href="{{route('Affiliation')}}"><i class="fa-solid fa-circle"style="margin-right: 10px;" ></i>site d'affiliation</a>
                         </li>
                     </ul>
                 </li>
@@ -168,13 +168,13 @@
                     <a href="#homeSubmen" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i style="margin-right: 10px;" class="fa-solid fa-pen"></i>Créer un CDC mobile</a>
                     <ul class="collapse list-unstyled" id="homeSubmen">
                         <li>
-                            <a href="{{route('siteVitrine')}}"><i class="fa-solid fa-circle"style="margin-right: 10px;" ></i>App E-commerce</a>
+                            <a href="{{route('App_e_commerce')}}"><i class="fa-solid fa-circle"style="margin-right: 10px;" ></i>App E-commerce</a>
                         </li>
                         <li>
-                        <a href="{{route('mobile')}}"><i class="fa-solid fa-circle"style="margin-right: 10px;" ></i>E-learning</a>
+                        <a href="{{route('E_learning')}}"><i class="fa-solid fa-circle"style="margin-right: 10px;" ></i>E-learning</a>
                         </li>
                         <li>
-                        <a href="{{route('e-commerce')}}"><i class="fa-solid fa-circle"style="margin-right: 10px;" ></i>Service X</a>
+                        <a href="{{route('Service_X')}}"><i class="fa-solid fa-circle"style="margin-right: 10px;" ></i>Service X</a>
                         </li>
                     
                     </ul>
@@ -184,9 +184,18 @@
                 <li>
                     <a href="#"><i style="margin-right: 20px;" class="fa-solid fa-users"></i>Utilisateurs</a>
                 </li>
-                <li>
-                    <a href="#"><i  style="margin-right: 20px;" class="fa-solid fa-sliders"></i>Configuration</a>
+                    @role('admin')
+                <li class="">
+                    <a href="#homeSubmeni" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i  style="margin-right: 20px;" class="fa-solid fa-sliders"></i>Configuration</a>
+                    <ul class="collapse list-unstyled" id="homeSubmeni">
+                        <li>
+                            <a href="{{route('script')}}"><i class="fa-solid fa-circle"style="margin-right: 10px;" ></i>Script</a>
+                        </li>
+                        
+                    
+                    </ul>
                 </li>
+                    @endrole
             </ul>
 
       

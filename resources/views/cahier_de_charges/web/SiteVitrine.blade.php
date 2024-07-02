@@ -13,12 +13,12 @@
          
 
             <div align = center style="margin-top:20px;display: flex; gap:20px;  ">
-                <span class="step" id="step-1">1</span><p>Présentation <br> de l'entreprise</p> >
-                <span class="step" id="step-2" >2</span><p>objectif  du<br> site</p> >
-                <span class="step" id="step-3" >3</span><p>analyse de <br>l'existant</p> >
-                <span class="step" id="step-4" >4</span><p>Design et <br>Contenu</p> >
-                <span class="step" id="step-5" >5</span><p>analyse de <br>l'existant</p> >
-                <span class="step" id="step-6" >6</span><p>confirmation</p>
+                <span class="step" id="step-1">1</span><p class="step-v" >Présentation <br> de l'entreprise</p> >
+                <span class="step" id="step-2" >2</span><p class="step-v" >objectif  du<br> site</p> >
+                <span class="step" id="step-3" >3</span><p class="step-v" >analyse de <br>l'existant</p> >
+                <span class="step" id="step-4" >4</span><p class="step-v" >Design et <br>Contenu</p> >
+                <span class="step" id="step-5" >5</span><p class="step-v" >analyse de <br>l'existant</p> >
+                <span class="step" id="step-6" >6</span><p class="step-v" >confirmation</p>
                 
             </div>
             <hr >
@@ -32,7 +32,7 @@
                         <div class="input-wrapper">
                         <label for="phone">phone<span style="color: red;" >*</span> </label>
                         <input type="phone" placeholder="+1 (207) 604-443" name="Telephone">
-                        <input type="text" name="type" value="Web" style="display: none;" name="text">
+                        <input type="text" name="type" value="site_web_Internet" style="display: none;" name="text">
                         <input type="text" name="site" value="vitrine" style="display: none;" name="text">
                         </div>
                     </div>
@@ -142,10 +142,7 @@
                 <div class="tab" id="tab-3">
                     <p>analyse de l'existant:</p>
                     <div class="input-group">
-                        <div class="input-wrapper">
-                        <label for="Site_internet_de_vos_principaux_concurrents">Site internet de vos principaux concurrents : <span style="color: red;" >*</span> </label>
-                        <textarea style="border-radius:20px" type="text" name="Site_internet_de_vos_principaux_concurrents" placeholder="Saisissez les sites internet de vos principaux concurrents"  ></textarea>
-                        </div>
+                   
                         <div class="input-wrapper">
                         <label for="Contraintes">Contraintes (donner des exemples de sites internet, dont vous appréciez un élément) :<span style="color: red;" >*</span> </label>
                         <textarea style="border-radius:20px" type="text" name="Contraintes" placeholder="Veuillez fournir des exemples de sites internet que vous appréciez et décrire les éléments que vous aimez."   ></textarea>
@@ -322,16 +319,16 @@
                     </div>
                     <div class="input-group">
                         <div class="input-wrapper">
-                        <legend>Your favorite technologies    <span style="color: red;" >*</span>     </legend>        
+                        <legend>Style graphique attendu  : <span style="color: red;" >*</span>     </legend>        
                         <fieldset style="     width: 750px;   display: flex; flex-wrap: wrap; " >
                                     <div style="width:33%;display:block;line-height:1px">
-                                        <label style="    margin-right: -208px;" ><input type="checkbox" name="Formulaire de contact" value="Formulaire de contact" checked> Formulaire de contact</label><br />
-                                        <label style="    margin-right: -208px;" ><input type="checkbox" name="Géolocalisation" value="Géolocalisation"> Géolocalisation</label><br />
-                                        <label style="    margin-right: -208px;" ><input type="checkbox" name="Besoin des APIs" value="Besoin des APIs"> Besoin des APIs</label><br />
-                                        <label style="    margin-right: -208px;" ><input type="checkbox" name="Google Analytics" value="Google Analytics">Google Analytics</label><br />
+                                        <label style="    margin-right: -208px;" ><input type="checkbox" name="Flat design" value="Flat design" checked> Flat design</label><br />
+                                        <label style="    margin-right: -208px;" ><input type="checkbox" name="Futuriste" value="Futuriste"> Futuriste</label><br />
+                                        <label style="    margin-right: -208px;" ><input type="checkbox" name="Interactif" value="Interactif"> Interactif</label><br />
+                                        <label style="    margin-right: -208px;" ><input type="checkbox" name="Moderne" value="Moderne">Moderne</label><br />
                                 
-                                        <label style="    margin-right: -208px;" ><input type="checkbox" name="Blog" value="Blog"> Blog</label><br />
-                                        <label style="    margin-right: -208px;" ><input type="checkbox" name="Capture des leads" value="Capture des leads"> Capture des leads</label><br />
+                                        <label style="    margin-right: -208px;" ><input type="checkbox" name="Retro" value="Retro"> Retro</label><br />
+                                        <label style="    margin-right: -208px;" ><input type="checkbox" name="Autres" value="Autres"> Autres</label><br />
                                     </div> 
                         </fieldset>
                         </div>
@@ -703,7 +700,7 @@
         </form>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag@3.0.1/dist/js/multi-select-tag.js"></script>
-
+                                          
         <script>
             new MultiSelectTag('languages')  // id
         </script>
@@ -880,7 +877,7 @@
                     return false;
                 }
             } else if (y[i].name == "Site_internet_de_vos_principaux_concurrents") {
-                var regex = /^[a-zA-ZÀ-ÿ\s,':-]+$/;
+                var regex = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/;
                 if (y[i].value === "" || !regex.test(y[i].value)) {
                     $(y[i]).css({ "border-color": "#ff5555" });
                     $("label[for='Site_internet_de_vos_principaux_concurrents']").css({ "color": "#ff5555" });
@@ -1443,6 +1440,9 @@ site internet sur le cahier de charge de son site internet`
             }
         }
         </script>
+  
+       
+       
     
    
  

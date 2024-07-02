@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
+use Illuminate\Support\Facades\App;
 use setasign\Fpdi\Fpdi;
 
 class ChatgptController extends Controller
@@ -11,13 +12,13 @@ class ChatgptController extends Controller
     public function index(Request $request)
     {
         $questions = [
-            ['id' => 1, 'question' => "c'est quoi le métier de développeur full stack"],
-            ['id' => 2, 'question' => "qui est le meilleur footballeur du monde"],
-            ['id' => 3, 'question' => "c'est quoi la différence entre JSON et BSON"],
+            ['id' => 1, 'question' => "étant qu’expert en rédaction des cahiers des charges pour le développement d’un site internet, écrire moi des paragraphes sur description de ce client: ".$request->input("Nom_de_l'entreprise").",et aussi l’activité du meme client,n'oubliez pas  les services ou les produits vendu et je veux que la réponse sera trop détaillé,s'il vous plait n'oubliez pas de respecter les points de sauter les lignes."],
+           
+ 
         ];
     
         $responses = [];
-    
+     
         try {
             $client = new Client();
             $url = 'https://api.openai.com/v1/chat/completions';
@@ -35,7 +36,7 @@ class ChatgptController extends Controller
                     'messages' => [
                         ['role' => 'user', 'content' => $message],
                     ],
-                    'max_tokens' => 4500,
+                    'max_tokens' => 8000,
                     'temperature' => 0.7,
                 ];
     
@@ -53,11 +54,10 @@ class ChatgptController extends Controller
                 $responses[$question['id']] = $responseContent;
             }
     
-       
+
     
             // Passer les réponses à la méthode generatePDF
-            return redirect()->route('generate.pdf', ['questions' => $questions, 'responses' => $responses]);
-    
+            return App::make(PDFController::class)->generatePDF($request, $questions, $responses);   
         } catch (ClientException $e) {
             return response()->json(['error' => $e->getMessage()], $e->getCode());
         } catch (\Exception $e) {
