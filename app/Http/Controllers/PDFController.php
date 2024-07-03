@@ -98,20 +98,10 @@ class PDFController extends Controller
         <body>
 
             <div class='page-break'>
-                <div
-                    style='position: relative; width: 100%; height: 100%;background-image:  url({{ public_path('img/pdf/page-de-garde.png') }}); background-size: cover; background-position: center;'>
-                    <span
-                        style='color: #59c0d7; position: absolute; top: 80px; right: 60px; letter-spacing: 20px; font-size: 50px;font-family: emoji;font-weight: 600;'>
-                        2024
-                    </span>
-                     
-                    <span style='position: absolute; bottom: 20px; left: 20px; max-width: 250px;'>
-                        <h1 style='font-family: emoji;margin: 0; padding: 0;color: #1d2542;'>
+                    <h1 style=' margin: auto; font-size:90px  color: #000;'>
 
-        
+                        Cahier <br> de <br> charge
                         </h1>
-                    </span>
-                </div>
             </div>
             <div class='page-break'>
                 <h1 class='primary-color' style='text-align: center'>introduction & description de l'entreprise  </h1>
